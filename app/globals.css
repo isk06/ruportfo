@@ -1,26 +1,98 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --max-width: 880px;
+  --muted: #666;
+  --accent: #111;
+  --bg: #fff;
+  --mono: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: var(--mono);
+  color:var(--accent);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding:40px 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:28px;
+}
+
+.header .links a{
+  margin-left:14px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+h1{
+  margin:0 0 8px 0;
+  font-size:1.7rem;
+  letter-spacing:-0.02em;
+}
+
+.lead{
+  margin:0;
+  color:var(--muted);
+  font-size:1rem;
+  max-width:56ch;
+}
+
+.section{
+  margin-top:28px;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+.project-card{
+  background:#f6f6f6;
+  border-radius:8px;
+  overflow:hidden;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#999;
+  font-size:0.9rem;
+  padding:8px;
+}
+
+.about{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:0.95rem;
+  max-width:70ch;
+}
+
+.contact{
+  margin-top:16px;
+  font-weight:600;
+}
+
+.footer{
+  margin-top:48px;
+  padding-top:20px;
+  border-top:1px solid #eee;
+  color:var(--muted);
+  font-size:0.9rem;
+  text-align:center;
 }
