@@ -85,7 +85,9 @@ h1{
 
 .contact{
   margin-top:16px;
-  font-weight:400;
+  color:var(--muted);
+  font-size:0.95rem;
+  font-weight:200;
 }
 
 .footer{
