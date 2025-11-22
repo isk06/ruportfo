@@ -24,7 +24,7 @@ export default function HomePage() {
 
       <section className="section">
         <h2>Get in touch</h2>
-        <p className="contact">isk.daraev@gmail.com</p>
+        <p className="contact font-normal">isk.daraev@gmail.com</p>
       </section>
 
       <section className="section">
