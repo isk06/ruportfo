@@ -8,9 +8,72 @@ import Footer from "../components/Footer";
 export default function HomePage() {
   // 1️⃣ Read all image filenames from the /public/images folder
   const imagesDirectory = path.join(process.cwd(), "public/images");
-  const imageFiles = fs.readdirSync(imagesDirectory).filter((file) =>
-    file.match(/\.(jpg|jpeg|png|webp)$/)
-  );
+const imageFiles = fs.readdirSync(imagesDirectory)
+  .filter((file) => file.match(/\.(jpg|jpeg|png|webp)$/))
+  .sort((a, b) => {
+    const order = [
+      "project1.jpg",
+      "project2.jpg",
+      "project3.jpg",
+      "project4.jpg",
+      "project5.jpg",
+      "project5.jpg",
+      "project7.jpg",
+      "project8.jpg",
+      "project9.jpg",
+      "project10.jpg",
+      "project11.jpg",
+      "project12.jpg",
+      "project13.jpg",
+      "project14.jpg",
+      "project15.jpg",
+      "project16.jpg",
+      "project17.jpg",
+      "project18.jpg",
+      "project19jpg",
+      "project20.jpg",
+      "project21.jpg",
+      "project22.jpg",
+      "project23.jpg",
+      "project24.jpg",
+      "project25.jpg",
+      "project26.jpg",
+      "project27.jpg",
+      "project28.jpg",
+      "project29.jpg",
+      "project30.jpg",
+      "project31.jpg",
+      "project32.jpg",
+      "project33.jpg",
+      "project34.jpg",
+      "project35.jpg",
+      "project36.jpg",
+      "project37.jpg",
+      "project38.jpg",
+      "project39.jpg",
+      "project40.jpg",
+      "project41.jpg",
+      "project42.jpg",
+      "project43.jpg",
+      "project44.jpg",
+      "project45.jpg",
+      "project46.jpg",
+      "project47.jpg",
+      "project48.jpg",
+      "project49.jpg",
+      "project50.jpg",
+      "project51.jpg",
+      "project52.jpg",
+      "project53.jpg",
+      "project54.jpg",
+      "project55.jpg",
+      "project56.jpg",
+      "project57.jpg",
+      "project58.jpg",
+      "project59.jpg"
+    ];
+    return order.indexOf(a) - order.indexOf(b);
+  });
 
   return (
     <>
