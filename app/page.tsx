@@ -33,9 +33,9 @@ export default function HomePage() {
         {imageFiles.map((file, index) => (
           <ProjectCard
             key={index}
-            title={`Project ${index + 1}`}
+            title={`Slide ${index + 1}`}
             image={`/images/${file}`}
-            description="Presentation design project example."
+            description="Presentation design example."
           />
         ))}
       </div>
