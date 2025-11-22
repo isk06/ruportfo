@@ -10,7 +10,7 @@ export default function Footer() {
       }}
     >
       <p>
-        © {new Date().getFullYear()} | Built with Next.js & Vercel
+        © 2025 | Built with Next.js & Vercel by Iskander Daraev
       </p>
     </footer>
   );
