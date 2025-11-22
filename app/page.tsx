@@ -29,15 +29,22 @@ export default function HomePage() {
 
       <section className="section">
         <h2>My works</h2>
-        <div style={{ display: "grid", gap: "20px" }}>
-        {imageFiles.map((file, index) => (
-          <ProjectCard
-            key={index}
-            title={`Slide ${index + 1}`}
-            image={`/images/${file}`}
-            description="Presentation design example."
-          />
-        ))}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)", // 2 columns
+            gap: "20px",
+            justifyItems: "center",
+          }}
+        >
+          {imageFiles.map((file, index) => (
+            <ProjectCard
+              key={index}
+              title={`Project ${index + 1}`}
+              image={`/images/${file}`}
+              description="Presentation design project example."
+            />
+          ))}
       </div>
       </section>
 
