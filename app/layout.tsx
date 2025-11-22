@@ -17,9 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p className="lead">Consulting and Corporate Finance Presentations - Design & Storytelling</p>
             </div>
             <nav className="links" aria-label="social">
-              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="#" target="_blank" rel="noreferrer">Dribbble</a>
-              <a href="#" target="_blank" rel="noreferrer">YouTube</a>
+              <a href="http://www.linkedin.com/in/iskdaraev" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="http://www.behance.net/iskdaraev" target="_blank" rel="noreferrer">Behance</a>
             </nav>
           </header>
 
