@@ -21,7 +21,7 @@ export default function ProjectCard({
           overflow: "hidden",
           display: "flex",
           flexDirection: "column",
-          height: "50%",
+          height: "100%",
         }}
       >
         <img
