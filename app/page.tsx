@@ -23,23 +23,7 @@ export default function HomePage() {
 
       <section className="section">
         <h2>Get in touch</h2>
-        <p className="contact font-normal">isk.daraev@gmail.com</p>
-        <div style={{ marginTop: "10px" }}>
-          <a
-            href="https://www.linkedin.com/in/iskander-daraev/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>{" | "}
-          <a
-            href="https://www.behance.net/iskdaraev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Behance
-          </a>
-        </div>
+        <p className="contact">isk.daraev@gmail.com</p>
       </section>
 
       <section className="section">
