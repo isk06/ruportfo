@@ -14,6 +14,8 @@ export default function ProjectCard({
         borderRadius: "12px",
         boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
         overflow: "hidden",
+        maxWidth: "300px",
+        margin: "0 auto",
       }}
     >
       <img
