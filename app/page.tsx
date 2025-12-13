@@ -21,6 +21,30 @@ export default function HomePage() {
 
   return (
     <>
+
+    <section className="hero hero-gray">
+  <div className="hero-content">
+    {/* Logo */}
+    <div className="hero-logo">
+      {/* your SVG / logo component here */}
+    </div>
+
+    {/* Text */}
+    <div>
+      <h1 className="hero-title">Iskander Daraev</h1>
+      <p className="hero-subtitle">
+        Consulting and Corporate Finance Presentations – Storytelling & Design
+      </p>
+    </div>
+
+    {/* Social icons */}
+    <div className="hero-socials">
+      <a href="https://linkedin.com" target="_blank" rel="noreferrer">in</a>
+      <a href="https://behance.net" target="_blank" rel="noreferrer">Be</a>
+    </div>
+  </div>
+</section>
+
       {/* ABOUT ME */}
       <section className="section">
         <h2>About me</h2>
