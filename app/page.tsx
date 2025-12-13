@@ -29,8 +29,13 @@ export default function HomePage() {
         <div className="hero-content">
           {/* Logo (optional) */}
           <div className="hero-logo">
-            {/* Place SVG or image here if needed */}
+            <img
+              src="/avatar.png"
+              alt="Iskander Daraev"
+              className="hero-avatar"
+            />
           </div>
+
 
           {/* Name & subtitle */}
           <div>
