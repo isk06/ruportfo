@@ -251,3 +251,16 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-gray {
+  background-color: #f3f4f6; /* same gray as hero */
+}
