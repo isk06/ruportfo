@@ -164,6 +164,7 @@ a:hover {
   font-weight: 500;
   color: #999;
   cursor: pointer;
+  margin-left: -16px;
 }
 
 .tab.active {
