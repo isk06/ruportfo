@@ -1,8 +1,6 @@
-'use client';
+"use client";
 
 import { useState } from "react";
-import ProjectCard from "./ProjectCard";
-import PdfCard from "./PdfCard";
 
 type Props = {
   images: string[];
@@ -13,86 +11,49 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
 
   return (
-    <section className="section">
-      {/* Tabs */}
-      <div
-        style={{
-          display: "flex",
-          gap: "40px",
-          borderBottom: "1px solid #e5e5e5",
-          marginBottom: "32px",
-        }}
-      >
+    <>
+      {/* TABS */}
+      <div className="tabs">
         <button
+          className={activeTab === "gallery" ? "tab active" : "tab"}
           onClick={() => setActiveTab("gallery")}
-          style={{
-            background: "none",
-            border: "none",
-            paddingBottom: "12px",
-            fontSize: "16px",
-            fontWeight: 600,
-            cursor: "pointer",
-            borderBottom:
-              activeTab === "gallery" ? "3px solid #1f6fff" : "3px solid transparent",
-          }}
         >
           Portfolio (gallery)
         </button>
 
         <button
+          className={activeTab === "pdfs" ? "tab active" : "tab"}
           onClick={() => setActiveTab("pdfs")}
-          style={{
-            background: "none",
-            border: "none",
-            paddingBottom: "12px",
-            fontSize: "16px",
-            fontWeight: 600,
-            cursor: "pointer",
-            borderBottom:
-              activeTab === "pdfs" ? "3px solid #1f6fff" : "3px solid transparent",
-          }}
         >
           Portfolio (presentations)
         </button>
       </div>
 
-      {/* Content */}
+      {/* CONTENT */}
       {activeTab === "gallery" && (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "24px",
-          }}
-        >
+        <div className="grid">
           {images.map((img, i) => (
-            <ProjectCard
+            <img
               key={i}
-              title={`Image ${i + 1}`}
-              image={`/images/${img}`}
-              description="Presentation design project example."
+              src={`/images/${img}`}
+              alt={`Project ${i + 1}`}
+              className="grid-image"
             />
           ))}
         </div>
       )}
 
       {activeTab === "pdfs" && (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "24px",
-          }}
-        >
+        <ul className="pdf-list">
           {pdfs.map((pdf, i) => (
-            <PdfCard
-              key={i}
-              title={`Presentation ${i + 1}`}
-              file={`/pdfs/${pdf}`}
-            />
+            <li key={i}>
+              <a href={`/pdfs/${pdf}`} target="_blank" rel="noreferrer">
+                {pdf}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
-    </section>
+    </>
   );
 }
