@@ -145,15 +145,15 @@ a:hover {
 /* IMPORTANT: these are the classes actually used now */
 
 .portfolio-tabs {
-  margin-left: -24px; /* shift left slightly */
+  margin-left: -22px; /* shift left slightly */
 }
 
 .portfolio-grid {
-  margin-left: -24px;
+  margin-left: -22px;
 }
 
 .portfolio-pdfs {
-  margin-left: -24px;
+  margin-left: -22px;
 }
 
 /* ===============================
