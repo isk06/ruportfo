@@ -89,6 +89,7 @@ a:hover {
 
 .hero-subtitle {
   font-size: 15px;
+  font-weight: 300;
   color: #555;
   margin-top: 4px;
 }
@@ -134,6 +135,7 @@ a:hover {
   max-width: 760px;
   color: #666;
   font-size: 15px;
+  font-weight: 300;
 }
 
 /* ===============================
