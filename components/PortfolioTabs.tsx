@@ -13,16 +13,16 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
 
   return (
-    <section className="section">
+    <div className="portfolio-offset">
       {/* Tabs */}
-      <div
+      <div className="tabs">
         style={{
           display: "flex",
           gap: "40px",
           borderBottom: "1px solid #e5e5e5",
           marginBottom: "32px",
         }}
-      >
+      </div>
         <button
           onClick={() => setActiveTab("gallery")}
           style={{

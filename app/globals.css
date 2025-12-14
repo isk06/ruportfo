@@ -284,3 +284,8 @@ a:hover {
 .footer-gray {
   background-color: #f3f4f6; /* same gray as hero */
 }
+
+/* Move portfolio tabs + content slightly left */
+.portfolio-offset {
+  margin-left: -24px; /* adjust: -16px / -24px / -32px */
+}
