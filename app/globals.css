@@ -156,6 +156,7 @@ a:hover {
   gap: 32px;
   margin-bottom: 32px;
   border-bottom: 1px solid #e5e5e5;
+  margin-left: -16px;
 }
 
 .tab {
@@ -178,6 +179,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  margin-left: -24px;
 }
 
 /* ===============================
@@ -283,9 +285,4 @@ a:hover {
 
 .footer-gray {
   background-color: #f3f4f6; /* same gray as hero */
-}
-
-/* Move portfolio tabs + content slightly left */
-.portfolio-offset {
-  margin-left: -24px; /* adjust: -16px / -24px / -32px */
 }
