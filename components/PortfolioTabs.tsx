@@ -16,6 +16,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
     <section className="section">
       {/* Tabs */}
       <div
+        className="portfolio-tabs"
         style={{
           display: "flex",
           gap: "40px",
@@ -33,7 +34,9 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
             fontWeight: 600,
             cursor: "pointer",
             borderBottom:
-              activeTab === "gallery" ? "3px solid #1f6fff" : "3px solid transparent",
+              activeTab === "gallery"
+                ? "3px solid #1f6fff"
+                : "3px solid transparent",
           }}
         >
           Portfolio (gallery)
@@ -49,16 +52,19 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
             fontWeight: 600,
             cursor: "pointer",
             borderBottom:
-              activeTab === "pdfs" ? "3px solid #1f6fff" : "3px solid transparent",
+              activeTab === "pdfs"
+                ? "3px solid #1f6fff"
+                : "3px solid transparent",
           }}
         >
           Portfolio (presentations)
         </button>
       </div>
 
-      {/* Content */}
+      {/* Gallery */}
       {activeTab === "gallery" && (
         <div
+          className="portfolio-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
@@ -76,8 +82,10 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
         </div>
       )}
 
+      {/* PDFs */}
       {activeTab === "pdfs" && (
         <div
+          className="portfolio-pdfs"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
