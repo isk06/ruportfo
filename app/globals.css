@@ -141,14 +141,7 @@ a:hover {
 ================================ */
 
 /* Sticky wrapper for title + tabs */
-.portfolio-sticky {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 20;
-  padding-top: 16px;
-  padding-bottom: 8px;
-}
+
 
 /* Title inside sticky */
 .portfolio-title {
@@ -262,4 +255,51 @@ a:hover {
   .portfolio-tabs {
     margin-left: 0;
   }
+}
+
+/* ===============================
+   FREEZE "MY WORKS" HEADER
+================================ */
+
+.works-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.works-sticky h2 {
+  margin-bottom: 8px;
+}
+
+.works-tabs {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: -24px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: #1f6fff;
+}
+
+/* CONTENT BELOW STICKY */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-left: -24px;
+  padding-top: 24px;
 }

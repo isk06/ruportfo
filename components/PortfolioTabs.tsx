@@ -13,29 +13,31 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
 
   return (
-    <div className="portfolio-sticky">
-      {/* title */}
-      <h2 className="portfolio-title">My works</h2>
+    <>
+      {/* STICKY PART */}
+      <div className="works-sticky">
+        <h2>My works</h2>
 
-      {/* tabs */}
-      <div className="portfolio-tabs">
-        <button
-          className={activeTab === "gallery" ? "tab active" : "tab"}
-          onClick={() => setActiveTab("gallery")}
-        >
-          Portfolio (gallery)
-        </button>
-        <button
-          className={activeTab === "pdfs" ? "tab active" : "tab"}
-          onClick={() => setActiveTab("pdfs")}
-        >
-          Portfolio (presentations)
-        </button>
+        <div className="works-tabs">
+          <button
+            className={activeTab === "gallery" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("gallery")}
+          >
+            Portfolio (gallery)
+          </button>
+
+          <button
+            className={activeTab === "pdfs" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("pdfs")}
+          >
+            Portfolio (presentations)
+          </button>
+        </div>
       </div>
 
-      {/* content */}
+      {/* SCROLLING PART */}
       {activeTab === "gallery" && (
-        <div className="portfolio-grid">
+        <div className="works-grid">
           {images.map((img, i) => (
             <ProjectCard
               key={img}
@@ -48,7 +50,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
       )}
 
       {activeTab === "pdfs" && (
-        <div className="portfolio-pdfs">
+        <div className="works-grid">
           {pdfs.map((pdf, i) => (
             <PdfCard
               key={pdf}
@@ -58,7 +60,6 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 }
-
