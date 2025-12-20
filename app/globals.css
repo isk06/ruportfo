@@ -143,14 +143,7 @@ a:hover {
 ================================ */
 
 /* Sticky section title */
-.my-works-title {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  z-index: 20;
-  padding-top: 12px;
-  padding-bottom: 8px;
-}
+
 
 /* ===============================
    PORTFOLIO TABS
@@ -158,9 +151,6 @@ a:hover {
 
 /* Tabs wrapper */
 .portfolio-tabs {
-  position: sticky;
-  top: 44px; /* below "My works" title */
-  z-index: 15;
   background: #ffffff;
   margin-left: -21px;
   padding-bottom: 8px;
@@ -168,10 +158,7 @@ a:hover {
 }
 
 /* Tabs buttons row */
-.portfolio-tabs-buttons {
-  display: flex;
-  gap: 40px;
-}
+
 
 /* ===============================
    PORTFOLIO CONTENT
