@@ -149,11 +149,12 @@ a:hover {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   width: 100%;
   max-width: 1100px;
   background: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-left: -21px;
 }
 
 /* Title inside sticky */
