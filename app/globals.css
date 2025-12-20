@@ -61,8 +61,9 @@ a:hover {
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  background: #ffffff;
   overflow: hidden;
-  background: #fff;
+  flex-shrink: 0;
 }
 
 .hero-avatar {
@@ -107,7 +108,7 @@ a:hover {
 .section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 16px 24px;
 }
 
 .section h2 {
@@ -117,7 +118,7 @@ a:hover {
 }
 
 /* ===============================
-   ABOUT
+   ABOUT / CONTACT
 ================================ */
 
 .about {
@@ -126,10 +127,6 @@ a:hover {
   font-size: 15px;
 }
 
-/* ===============================
-   CONTACT
-================================ */
-
 .contact {
   font-weight: 400;
   margin-top: 6px;
@@ -137,27 +134,44 @@ a:hover {
 }
 
 /* ===============================
-   PORTFOLIO FREEZE PANE
+   EXCEL-LIKE FREEZE (MY WORKS)
 ================================ */
 
-/* Sticky wrapper for title + tabs */
+/* Sticky container (JS toggles .fixed) */
+.works-sticky {
+  background: #ffffff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 100;
+}
 
+/* When frozen */
+.works-sticky.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
 
-/* Title inside sticky */
-.portfolio-title {
-  margin-bottom: 8px;
-  font-size: 20px;
-  font-weight: 600;
+/* Section title */
+.works-sticky h2 {
+  max-width: 1100px;
+  margin: 0 auto 12px auto;
+  padding: 0 24px;
+}
+
+/* Tabs row */
+.works-tabs {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 /* Tabs */
-.portfolio-tabs {
-  display: flex;
-  gap: 40px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px;
-}
-
 .tab {
   background: none;
   border: none;
@@ -172,14 +186,22 @@ a:hover {
   border-bottom-color: #1f6fff;
 }
 
-/* Grid content */
-.portfolio-grid,
-.portfolio-pdfs {
+/* ===============================
+   PORTFOLIO CONTENT
+================================ */
+
+/* Push content below fixed header */
+.works-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Grid */
+.works-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-left: -24px;
-  padding-top: 24px;
 }
 
 /* ===============================
@@ -213,7 +235,33 @@ a:hover {
   padding: 14px 16px;
   font-size: 13px;
   color: #666;
-  background: #fff;
+  background: #ffffff;
+}
+
+/* ===============================
+   IMAGE MODAL
+================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: zoom-out;
 }
 
 /* ===============================
@@ -229,7 +277,7 @@ a:hover {
 }
 
 .footer-gray {
-  background: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 /* ===============================
@@ -246,148 +294,12 @@ a:hover {
     margin-left: 0;
   }
 
-  .portfolio-grid,
-  .portfolio-pdfs {
+  .works-grid {
     grid-template-columns: 1fr;
-    margin-left: 0;
   }
 
-  .portfolio-tabs {
-    margin-left: 0;
+  .works-sticky.fixed {
+    position: static;
+    box-shadow: none;
   }
-}
-
-/* ===============================
-   FREEZE "MY WORKS" HEADER
-================================ */
-
-.works-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  background: #ffffff;
-  padding-top: 12px;
-  padding-bottom: 8px;
-}
-
-.works-sticky h2 {
-  margin-bottom: 8px;
-}
-
-.works-tabs {
-  display: flex;
-  gap: 40px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px;
-}
-
-.tab {
-  background: none;
-  border: none;
-  padding-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-}
-
-.tab.active {
-  border-bottom-color: #1f6fff;
-}
-
-/* CONTENT BELOW STICKY */
-.works-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-left: -24px;
-  padding-top: 24px;
-}
-
-.portfolio-sticky {
-  background: #fff;
-  z-index: 500;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 100%;
-}
-
-.portfolio-sticky.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.portfolio-tabs {
-  display: flex;
-  gap: 32px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px;
-}
-
-.works-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-left: -24px;
-  padding-top: 24px;
-}
-
-.tab {
-  background: none;
-  border: none;
-  padding-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-}
-
-.tab.active {
-  border-bottom-color: #1f6fff;
-}
-
-.works-sticky {
-  background: #fff;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  width: 100%;
-  z-index: 100;
-}
-
-.works-sticky.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.works-tabs {
-  display: flex;
-  gap: 32px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px;
-}
-
-.works-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-left: -24px;
-  padding-top: 24px;
-}
-
-.tab {
-  background: none;
-  border: none;
-  padding-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-}
-
-.tab.active {
-  border-bottom-color: #1f6fff;
 }
