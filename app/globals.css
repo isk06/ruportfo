@@ -57,14 +57,12 @@ a:hover {
   gap: 24px;
 }
 
-/* Avatar */
 .hero-logo {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: #ffffff;
   overflow: hidden;
-  flex-shrink: 0;
+  background: #fff;
 }
 
 .hero-avatar {
@@ -139,40 +137,34 @@ a:hover {
 }
 
 /* ===============================
-   MY WORKS — FREEZE PANE
+   PORTFOLIO FREEZE PANE
 ================================ */
 
-.portfolio-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Sticky header (title + tabs) */
+/* Sticky wrapper for title + tabs */
 .portfolio-sticky {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: #ffffff;
+  background: #fff;
+  z-index: 20;
   padding-top: 16px;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
-/* Title */
-.portfolio-sticky h2 {
-  margin-bottom: 12px;
+/* Title inside sticky */
+.portfolio-title {
+  margin-bottom: 8px;
   font-size: 20px;
   font-weight: 600;
 }
 
-/* Tabs row */
+/* Tabs */
 .portfolio-tabs {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px; /* left alignment */
+  margin-left: -24px;
 }
 
-/* Tab button */
 .tab {
   background: none;
   border: none;
@@ -187,18 +179,14 @@ a:hover {
   border-bottom-color: #1f6fff;
 }
 
-/* Scrollable content */
-.portfolio-scroll {
-  padding-top: 24px;
-}
-
-/* Grids */
+/* Grid content */
 .portfolio-grid,
 .portfolio-pdfs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-left: -24px;
+  padding-top: 24px;
 }
 
 /* ===============================
@@ -227,39 +215,12 @@ a:hover {
   display: block;
 }
 
-/* Caption */
 .card-caption {
   margin-top: auto;
   padding: 14px 16px;
   font-size: 13px;
   color: #666;
-  background: #ffffff;
-}
-
-/* ===============================
-   IMAGE MODAL
-================================ */
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  max-width: 90vw;
-  max-height: 90vh;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  cursor: zoom-out;
+  background: #fff;
 }
 
 /* ===============================
@@ -275,7 +236,7 @@ a:hover {
 }
 
 .footer-gray {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
 /* ===============================
@@ -292,14 +253,13 @@ a:hover {
     margin-left: 0;
   }
 
-  .portfolio-tabs,
-  .portfolio-grid,
-  .portfolio-pdfs {
-    margin-left: 0;
-  }
-
   .portfolio-grid,
   .portfolio-pdfs {
     grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .portfolio-tabs {
+    margin-left: 0;
   }
 }

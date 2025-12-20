@@ -84,15 +84,17 @@ export default function HomePage() {
         <p className="contact">isk.daraev@gmail.com</p>
       </section>
 
-      {/* ================= WORKS ================= */}
-      <section className="section">
-        
+{/* ================= WORKS ================= */}
+<section className="section">
+  <div className="portfolio-wrapper">
+    {/* title + tabs will be sticky */}
+    <PortfolioTabs
+      images={imageFiles}
+      pdfs={pdfFiles}
+    />
+  </div>
+</section>
 
-        <PortfolioTabs
-          images={imageFiles}
-          pdfs={pdfFiles}
-        />
-      </section>
 
       {/* ================= FOOTER ================= */}
       <Footer />
