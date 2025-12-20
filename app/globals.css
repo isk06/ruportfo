@@ -137,15 +137,13 @@ a:hover {
    EXCEL-LIKE FREEZE (MY WORKS)
 ================================ */
 
-/* Sticky container (JS toggles .fixed) */
 .works-sticky {
   background: #ffffff;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 0;
   z-index: 100;
 }
 
-/* When frozen */
+/* FIXED STATE — CENTERED LIKE ALL OTHER SECTIONS */
 .works-sticky.fixed {
   position: fixed;
   top: 0;
@@ -153,23 +151,21 @@ a:hover {
   transform: translateX(-50%);
   width: 100%;
   max-width: 1100px;
+  background: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-/* Section title */
+/* Title inside sticky */
 .works-sticky h2 {
-  max-width: 1100px;
-  margin: 0 auto 12px auto;
+  margin-bottom: 12px;
   padding: 0 24px;
 }
 
 /* Tabs row */
 .works-tabs {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   gap: 32px;
+  padding: 0 24px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -192,7 +188,6 @@ a:hover {
    PORTFOLIO CONTENT
 ================================ */
 
-/* Push content below fixed header */
 .works-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -302,6 +297,8 @@ a:hover {
 
   .works-sticky.fixed {
     position: static;
+    transform: none;
     box-shadow: none;
   }
 }
+
