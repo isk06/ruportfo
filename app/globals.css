@@ -141,6 +141,7 @@ a:hover {
   background: #ffffff;
   padding: 12px 0;
   z-index: 100;
+  margin-left: -21px;
 }
 
 /* FIXED STATE — CENTERED LIKE ALL OTHER SECTIONS */
