@@ -192,7 +192,7 @@ a:hover {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px;
-  margin-left: -21px;
+  margin-left: -24px;
 }
 
 /* Grid */
@@ -200,6 +200,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  margin-left: -24px;
 }
 
 /* ===============================
