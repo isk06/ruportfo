@@ -149,7 +149,7 @@ a:hover {
 .works-sticky.fixed {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 12px;
   right: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
