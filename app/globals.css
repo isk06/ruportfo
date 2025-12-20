@@ -57,7 +57,7 @@ a:hover {
   gap: 24px;
 }
 
-/* Avatar / logo */
+/* Avatar */
 .hero-logo {
   width: 72px;
   height: 72px;
@@ -139,35 +139,66 @@ a:hover {
 }
 
 /* ===============================
-   MY WORKS — FREEZE PANE LOGIC
+   MY WORKS — FREEZE PANE
 ================================ */
 
-/* Sticky section title */
-
-
-/* ===============================
-   PORTFOLIO TABS
-================================ */
-
-/* Tabs wrapper */
-.portfolio-tabs {
-  background: #ffffff;
-  margin-left: -21px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e5e5e5;
+.portfolio-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Tabs buttons row */
+/* Sticky header (title + tabs) */
+.portfolio-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
 
+/* Title */
+.portfolio-sticky h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
 
-/* ===============================
-   PORTFOLIO CONTENT
-================================ */
+/* Tabs row */
+.portfolio-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: -24px; /* left alignment */
+}
 
+/* Tab button */
+.tab {
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: #1f6fff;
+}
+
+/* Scrollable content */
+.portfolio-scroll {
+  padding-top: 24px;
+}
+
+/* Grids */
 .portfolio-grid,
 .portfolio-pdfs {
-  margin-left: -21px;
-  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-left: -24px;
 }
 
 /* ===============================
@@ -196,17 +227,17 @@ a:hover {
   display: block;
 }
 
-/* Caption pinned to bottom */
+/* Caption */
 .card-caption {
   margin-top: auto;
   padding: 14px 16px;
   font-size: 13px;
   color: #666;
-  background: #fff;
+  background: #ffffff;
 }
 
 /* ===============================
-   IMAGE MODAL (ZOOM)
+   IMAGE MODAL
 ================================ */
 
 .modal-overlay {
@@ -261,68 +292,14 @@ a:hover {
     margin-left: 0;
   }
 
+  .portfolio-tabs,
   .portfolio-grid,
-  .portfolio-pdfs,
-  .portfolio-tabs {
+  .portfolio-pdfs {
     margin-left: 0;
   }
 
-  .portfolio-tabs {
-    top: 0;
+  .portfolio-grid,
+  .portfolio-pdfs {
+    grid-template-columns: 1fr;
   }
-}
-
-/* ===============================
-   FREEZE MY WORKS + TABS
-================================ */
-
-.portfolio-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.portfolio-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #ffffff;
-  padding-top: 16px;
-  padding-bottom: 12px;
-}
-
-.portfolio-sticky h2 {
-  margin-bottom: 12px;
-}
-
-.portfolio-tabs {
-  display: flex;
-  gap: 32px;
-  border-bottom: 1px solid #e5e5e5;
-  margin-left: -24px; /* keep your left alignment */
-}
-
-.tab {
-  background: none;
-  border: none;
-  padding-bottom: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-}
-
-.tab.active {
-  border-bottom-color: #1f6fff;
-}
-
-.portfolio-scroll {
-  padding-top: 24px;
-}
-
-.portfolio-grid,
-.portfolio-pdfs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-left: -24px;
 }
