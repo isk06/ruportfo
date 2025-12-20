@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
 
@@ -11,14 +11,29 @@ type Props = {
 
 export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
+  const stickyRef = useRef<HTMLDivElement>(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      if (!stickyRef.current) return;
+      const top = stickyRef.current.getBoundingClientRect().top;
+      setIsSticky(top <= 0);
+    }
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      {/* STICKY PART */}
-      <div className="works-sticky">
+      <div
+        ref={stickyRef}
+        className={`portfolio-sticky ${isSticky ? "fixed" : ""}`}
+      >
         <h2>My works</h2>
 
-        <div className="works-tabs">
+        <div className="portfolio-tabs">
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
@@ -35,7 +50,6 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
         </div>
       </div>
 
-      {/* SCROLLING PART */}
       {activeTab === "gallery" && (
         <div className="works-grid">
           {images.map((img, i) => (
