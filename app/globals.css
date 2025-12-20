@@ -347,3 +347,47 @@ a:hover {
 .tab.active {
   border-bottom-color: #1f6fff;
 }
+
+.works-sticky {
+  background: #fff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  z-index: 100;
+}
+
+.works-sticky.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.works-tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: -24px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-left: -24px;
+  padding-top: 24px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: #1f6fff;
+}

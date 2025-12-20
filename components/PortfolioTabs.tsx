@@ -11,29 +11,29 @@ type Props = {
 
 export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
-  const stickyRef = useRef<HTMLDivElement>(null);
-  const [isSticky, setIsSticky] = useState(false);
+  const [fixed, setFixed] = useState(false);
+  const refSticky = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function onScroll() {
-      if (!stickyRef.current) return;
-      const top = stickyRef.current.getBoundingClientRect().top;
-      setIsSticky(top <= 0);
-    }
+    const handleScroll = () => {
+      if (!refSticky.current) return;
+      const topOffset = refSticky.current.getBoundingClientRect().top;
+      setFixed(topOffset <= 0);
+    };
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
       <div
-        ref={stickyRef}
-        className={`portfolio-sticky ${isSticky ? "fixed" : ""}`}
+        ref={refSticky}
+        className={fixed ? "works-sticky fixed" : "works-sticky"}
       >
         <h2>My works</h2>
 
-        <div className="portfolio-tabs">
+        <div className="works-tabs">
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
