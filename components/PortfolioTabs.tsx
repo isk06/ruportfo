@@ -13,67 +13,32 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
 
   return (
-    <section className="section">
-      {/* Tabs */}
-      <div
-        className="portfolio-tabs"
-        style={{
-          display: "flex",
-          gap: "40px",
-          borderBottom: "1px solid #e5e5e5",
-          marginBottom: "32px",
-        }}
-      >
-        <button
-          onClick={() => setActiveTab("gallery")}
-          style={{
-            background: "none",
-            border: "none",
-            paddingBottom: "12px",
-            fontSize: "16px",
-            fontWeight: 600,
-            cursor: "pointer",
-            borderBottom:
-              activeTab === "gallery"
-                ? "3px solid #1f6fff"
-                : "3px solid transparent",
-          }}
-        >
-          Portfolio (gallery)
-        </button>
+    <>
+      {/* Tabs (sticky, left-aligned) */}
+      <div className="portfolio-tabs">
+        <div className="portfolio-tabs-buttons">
+          <button
+            onClick={() => setActiveTab("gallery")}
+            className={activeTab === "gallery" ? "tab active" : "tab"}
+          >
+            Portfolio (gallery)
+          </button>
 
-        <button
-          onClick={() => setActiveTab("pdfs")}
-          style={{
-            background: "none",
-            border: "none",
-            paddingBottom: "12px",
-            fontSize: "16px",
-            fontWeight: 600,
-            cursor: "pointer",
-            borderBottom:
-              activeTab === "pdfs"
-                ? "3px solid #1f6fff"
-                : "3px solid transparent",
-          }}
-        >
-          Portfolio (presentations)
-        </button>
+          <button
+            onClick={() => setActiveTab("pdfs")}
+            className={activeTab === "pdfs" ? "tab active" : "tab"}
+          >
+            Portfolio (presentations)
+          </button>
+        </div>
       </div>
 
       {/* Gallery */}
       {activeTab === "gallery" && (
-        <div
-          className="portfolio-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "24px",
-          }}
-        >
+        <div className="portfolio-grid">
           {images.map((img, i) => (
             <ProjectCard
-              key={i}
+              key={img}
               title={`Image ${i + 1}`}
               image={`/images/${img}`}
               description="Presentation design project example."
@@ -84,23 +49,16 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
 
       {/* PDFs */}
       {activeTab === "pdfs" && (
-        <div
-          className="portfolio-pdfs"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "24px",
-          }}
-        >
+        <div className="portfolio-pdfs">
           {pdfs.map((pdf, i) => (
             <PdfCard
-              key={i}
+              key={pdf}
               title={`Presentation ${i + 1}`}
               file={`/pdfs/${pdf}`}
             />
           ))}
         </div>
       )}
-    </section>
+    </>
   );
 }
