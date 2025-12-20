@@ -148,7 +148,7 @@ a:hover {
 .works-sticky.fixed {
   position: fixed;
   top: 0;
-  left: auto;
+  left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1100px;
