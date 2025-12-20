@@ -115,7 +115,7 @@ a:hover {
 .section h2 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px; /* reduced spacing */
+  margin-bottom: 10px;
 }
 
 /* ===============================
@@ -133,27 +133,54 @@ a:hover {
 ================================ */
 
 .contact {
-  font-weight: 400; /* email weight control */
+  font-weight: 400;
   margin-top: 6px;
   color: #666;
+}
+
+/* ===============================
+   MY WORKS — FREEZE PANE LOGIC
+================================ */
+
+/* Sticky section title */
+.my-works-title {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 20;
+  padding-top: 12px;
+  padding-bottom: 8px;
 }
 
 /* ===============================
    PORTFOLIO TABS
 ================================ */
 
-/* IMPORTANT: these are the classes actually used now */
-
+/* Tabs wrapper */
 .portfolio-tabs {
-  margin-left: -21px; /* shift left slightly */
-}
-
-.portfolio-grid {
+  position: sticky;
+  top: 44px; /* below "My works" title */
+  z-index: 15;
+  background: #ffffff;
   margin-left: -21px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
+/* Tabs buttons row */
+.portfolio-tabs-buttons {
+  display: flex;
+  gap: 40px;
+}
+
+/* ===============================
+   PORTFOLIO CONTENT
+================================ */
+
+.portfolio-grid,
 .portfolio-pdfs {
   margin-left: -21px;
+  padding-top: 16px;
 }
 
 /* ===============================
@@ -230,7 +257,7 @@ a:hover {
 }
 
 .footer-gray {
-  background-color: #f5f5f5; /* same gray as hero */
+  background-color: #f5f5f5;
 }
 
 /* ===============================
@@ -248,7 +275,12 @@ a:hover {
   }
 
   .portfolio-grid,
-  .portfolio-pdfs {
+  .portfolio-pdfs,
+  .portfolio-tabs {
     margin-left: 0;
+  }
+
+  .portfolio-tabs {
+    top: 0;
   }
 }

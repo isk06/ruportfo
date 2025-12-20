@@ -86,7 +86,7 @@ export default function HomePage() {
 
       {/* ================= WORKS ================= */}
       <section className="section">
-        <h2>My works</h2>
+      
 
         <PortfolioTabs
           images={imageFiles}
