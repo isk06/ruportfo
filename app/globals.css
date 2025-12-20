@@ -140,8 +140,6 @@ a:hover {
 /* Sticky container (JS toggles .fixed) */
 .works-sticky {
   background: #ffffff;
-  padding-top: 12px;
-  padding-bottom: 12px;
   z-index: 100;
 }
 
@@ -149,8 +147,10 @@ a:hover {
 .works-sticky.fixed {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1100px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
