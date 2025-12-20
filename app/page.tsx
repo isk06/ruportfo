@@ -88,10 +88,6 @@ export default function HomePage() {
       <section className="section">
         
 
-        <PortfolioTabs
-          images={imageFiles}
-          pdfs={pdfFiles}
-        />
       </section>
 
       {/* ================= FOOTER ================= */}

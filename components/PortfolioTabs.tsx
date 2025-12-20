@@ -13,52 +13,55 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
 
   return (
-    <>
-      {/* Tabs (sticky, left-aligned) */}
-      <div className="portfolio-tabs">
-        <div className="portfolio-tabs-buttons">
+    <div className="portfolio-wrapper">
+      {/* STICKY HEADER */}
+      <div className="portfolio-sticky">
+        <h2>My works</h2>
+
+        <div className="portfolio-tabs">
           <button
-            onClick={() => setActiveTab("gallery")}
             className={activeTab === "gallery" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("gallery")}
           >
             Portfolio (gallery)
           </button>
 
           <button
-            onClick={() => setActiveTab("pdfs")}
             className={activeTab === "pdfs" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("pdfs")}
           >
             Portfolio (presentations)
           </button>
         </div>
       </div>
 
-      {/* Gallery */}
-      {activeTab === "gallery" && (
-        <div className="portfolio-grid">
-          {images.map((img, i) => (
-            <ProjectCard
-              key={img}
-              title={`Image ${i + 1}`}
-              image={`/images/${img}`}
-              description="Presentation design project example."
-            />
-          ))}
-        </div>
-      )}
+      {/* SCROLLING CONTENT */}
+      <div className="portfolio-scroll">
+        {activeTab === "gallery" && (
+          <div className="portfolio-grid">
+            {images.map((img, i) => (
+              <ProjectCard
+                key={i}
+                title={`Image ${i + 1}`}
+                image={`/images/${img}`}
+                description="Presentation design project example."
+              />
+            ))}
+          </div>
+        )}
 
-      {/* PDFs */}
-      {activeTab === "pdfs" && (
-        <div className="portfolio-pdfs">
-          {pdfs.map((pdf, i) => (
-            <PdfCard
-              key={pdf}
-              title={`Presentation ${i + 1}`}
-              file={`/pdfs/${pdf}`}
-            />
-          ))}
-        </div>
-      )}
-    </>
+        {activeTab === "pdfs" && (
+          <div className="portfolio-pdfs">
+            {pdfs.map((pdf, i) => (
+              <PdfCard
+                key={i}
+                title={`Presentation ${i + 1}`}
+                file={`/pdfs/${pdf}`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
