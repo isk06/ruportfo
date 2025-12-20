@@ -147,9 +147,9 @@ a:hover {
 /* FIXED STATE — CENTERED LIKE ALL OTHER SECTIONS */
 .works-sticky.fixed {
   position: fixed;
-  top: 200;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(50%);
   width: 100%;
   max-width: 1100px;
   background: #ffffff;
