@@ -188,13 +188,13 @@ a:hover {
 
 
 /* ===============================
-   TABS
+   TABS – SMOOTH
 ================================ */
 
 .tabs {
   display: flex;
   gap: 32px;
-  border-bottom: 1px solid #e5e7eb; /* light grey divider */
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .tab {
@@ -206,13 +206,30 @@ a:hover {
 
   font-size: 15px;
   font-weight: 400;
-  color: #9ca3af; /* grey */
+  color: #9ca3af;
 
-  transition: color 0.2s ease, font-weight 0.2s ease;
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+}
+
+/* underline (exists always, but hidden) */
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #2563eb;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .tab:hover {
-  color: #111827; /* dark */
+  color: #111827;
 }
 
 .tab.active {
@@ -220,16 +237,49 @@ a:hover {
   color: #111827;
 }
 
-/* blue underline */
+/* animate underline in */
 .tab.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: #2563eb; /* consulting blue */
+  transform: scaleX(1);
 }
+
+.tabs-wrapper {
+  position: relative;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: #9ca3af;
+  transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+.tab.active {
+  font-weight: 600;
+  color: #111827;
+}
+
+.tab-underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 33.333%;
+  height: 2px;
+  background-color: #2563eb;
+
+  transition: transform 0.3s ease;
+}
+
 
 
 /* ===============================
