@@ -1,9 +1,21 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 
 const tabs = ["Overview", "Projects", "Charts"];
 
 export default function Tabs() {
   const [active, setActive] = useState(0);
+  const tabsRef = useRef([]);
+  const underlineRef = useRef(null);
+
+  useEffect(() => {
+    const currentTab = tabsRef.current[active];
+    if (currentTab && underlineRef.current) {
+      underlineRef.current.style.width = `${currentTab.offsetWidth}px`;
+      underlineRef.current.style.transform = `translateX(${currentTab.offsetLeft}px)`;
+    }
+  }, [active]);
 
   return (
     <div className="tabs-wrapper">
@@ -11,6 +23,7 @@ export default function Tabs() {
         {tabs.map((tab, i) => (
           <button
             key={tab}
+            ref={(el) => (tabsRef.current[i] = el)}
             className={`tab ${active === i ? "active" : ""}`}
             onClick={() => setActive(i)}
           >
@@ -19,10 +32,7 @@ export default function Tabs() {
         ))}
       </div>
 
-      <div
-        className="tab-underline"
-        style={{ transform: `translateX(${active * 100}%)` }}
-      />
+      <div ref={underlineRef} className="tab-underline" />
     </div>
   );
 }

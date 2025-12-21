@@ -242,6 +242,10 @@ a:hover {
   transform: scaleX(1);
 }
 
+/* ===============================
+   TABS – CONSULTING STYLE
+================================ */
+
 .tabs-wrapper {
   position: relative;
   border-bottom: 1px solid #e5e7eb;
@@ -249,10 +253,10 @@ a:hover {
 
 .tabs {
   display: flex;
+  gap: 32px;
 }
 
 .tab {
-  flex: 1;
   padding: 12px 0;
   background: none;
   border: none;
@@ -261,7 +265,13 @@ a:hover {
   font-size: 15px;
   font-weight: 400;
   color: #9ca3af;
+  text-align: left;
+
   transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+.tab:hover {
+  color: #111827;
 }
 
 .tab.active {
@@ -269,16 +279,19 @@ a:hover {
   color: #111827;
 }
 
+/* moving underline */
 .tab-underline {
   position: absolute;
   bottom: -1px;
   left: 0;
-  width: 33.333%;
   height: 2px;
   background-color: #2563eb;
 
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    width 0.3s ease;
 }
+
 
 
 
