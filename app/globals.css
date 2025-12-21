@@ -99,7 +99,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  font-weight: 400
 }
 
 /* ===============================
@@ -186,6 +185,52 @@ a:hover {
 .tab.active {
   border-bottom-color: #1f6fff;
 }
+
+
+/* ===============================
+   TABS
+================================ */
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e7eb; /* light grey divider */
+}
+
+.tab {
+  position: relative;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: #9ca3af; /* grey */
+
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.tab:hover {
+  color: #111827; /* dark */
+}
+
+.tab.active {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* blue underline */
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #2563eb; /* consulting blue */
+}
+
 
 /* ===============================
    PORTFOLIO CONTENT
