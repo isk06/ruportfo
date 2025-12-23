@@ -15,6 +15,8 @@ export default function HomePage() {
   const pdfFiles: PdfData[] = [
     { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png" },
     { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.png" },
+    { file: "/pdfs/Airbus.pdf", cover: "/pdf-covers/Airbus.png" },
+    { file: "/pdfs/Sorwe.pdf", cover: "/pdf-covers/Sorwe.png" },
     // Add more PDFs here
   ];
 
