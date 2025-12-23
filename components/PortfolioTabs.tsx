@@ -4,12 +4,17 @@ import { useState, useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
 
-type Props = {
-  images: string[];
-  pdfs: string[];
+export type PdfData = {
+  file: string;   // path to PDF
+  cover: string;  // path to PDF cover image
 };
 
-export default function PortfolioTabs({ images, pdfs }: Props) {
+type PortfolioTabsProps = {
+  images: string[];
+  pdfs: PdfData[];
+};
+
+export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
   const [isFixed, setIsFixed] = useState(false);
 
@@ -19,27 +24,26 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   useEffect(() => {
     if (!anchorRef.current) return;
 
-    // Capture original Y position ONCE
+    // Capture the initial position of the sticky header
     freezePoint.current =
       anchorRef.current.getBoundingClientRect().top + window.scrollY;
 
-    const onScroll = () => {
+    const handleScroll = () => {
       setIsFixed(window.scrollY >= freezePoint.current);
     };
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      {/* Invisible anchor keeps layout correct */}
+      {/* Invisible anchor to maintain layout */}
       <div ref={anchorRef} />
 
-      {/* STICKY HEADER */}
+      {/* Sticky Tabs Header */}
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>My works</h2>
-
         <div className="works-tabs">
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
@@ -47,7 +51,6 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
           >
             Portfolio (gallery)
           </button>
-
           <button
             className={activeTab === "pdfs" ? "tab active" : "tab"}
             onClick={() => setActiveTab("pdfs")}
@@ -57,29 +60,20 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
         </div>
       </div>
 
-      {/* CONTENT */}
+      {/* Portfolio Content */}
       <div className="works-content">
         {activeTab === "gallery" && (
           <div className="works-grid">
-            {images.map((img, i) => (
-              <ProjectCard
-                key={img}
-                title={`Image ${i + 1}`}
-                image={`/images/${img}`}
-                description="Presentation design project example."
-              />
+            {images.map((img) => (
+              <ProjectCard key={img} image={`/images/${img}`} />
             ))}
           </div>
         )}
 
         {activeTab === "pdfs" && (
           <div className="works-grid">
-            {pdfs.map((pdf, i) => (
-              <PdfCard
-                key={pdf}
-                title={`Presentation ${i + 1}`}
-                file={`/pdfs/${pdf}`}
-              />
+            {pdfs.map((pdf) => (
+              <PdfCard key={pdf.file} file={pdf.file} cover={pdf.cover} />
             ))}
           </div>
         )}

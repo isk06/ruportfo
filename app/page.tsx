@@ -13,14 +13,14 @@ export default function HomePage() {
         .sort()
     : [];
 
-  /* ---------- PDFS ---------- */
-  const pdfsDir = path.join(process.cwd(), "public/pdfs");
-  const pdfFiles = fs.existsSync(pdfsDir)
-    ? fs
-        .readdirSync(pdfsDir)
-        .filter((file) => /\.pdf$/i.test(file))
-        .sort()
-    : [];
+  /* Example: replace your existing pdfFiles array with this */
+
+const pdfFiles = [
+  { file: "/pdfs/example1.pdf", cover: "/pdfs/covers/example1.png" },
+  { file: "/pdfs/example2.pdf", cover: "/pdfs/covers/example2.png" },
+  { file: "/pdfs/example3.pdf", cover: "/pdfs/covers/example3.png" },
+];
+
 
   return (
     <>
