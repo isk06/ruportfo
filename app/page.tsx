@@ -51,7 +51,7 @@ export default function HomePage() {
         <img
           src="/icons/linkedin.svg"
           alt="LinkedIn"
-          style={{ width: 24, height: 24 }}
+          style={{ width: 200, height: 200 }}
         />
       </a>
 
@@ -63,7 +63,7 @@ export default function HomePage() {
         <img
           src="/icons/behance.svg"
           alt="Behance"
-          style={{ width: 24, height: 24 }}
+          style={{ width: 200, height: 200 }}
         />
       </a>
     </div>
