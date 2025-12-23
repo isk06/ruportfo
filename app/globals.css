@@ -378,7 +378,7 @@ a:hover {
 }
 
 /* ===============================
-   IMAGE MODAL (DESKTOP)
+   IMAGE MODAL
 ================================ */
 
 .modal-overlay {
@@ -387,27 +387,28 @@ a:hover {
   background: rgba(0, 0, 0, 0.75);
   z-index: 1000;
   overflow: auto;
-  padding: 40px;
+  padding: 32px 16px;
 }
 
+/* IMPORTANT: force modal image larger than card */
 .modal-image {
   display: block;
   margin: 0 auto;
-  max-width: 60%;      /* desktop size */
-  max-height: 90vh;
-  width: auto;
+  width: 80vw;          /* FORCE enlargement */
+  max-width: 900px;    /* safety cap for desktop */
   height: auto;
+  max-height: none;    /* allow tall images */
   border-radius: 8px;
   cursor: zoom-out;
 }
 
 /* ===============================
-   IMAGE MODAL (MOBILE)
+   MOBILE — EVEN BIGGER
 ================================ */
 
 @media (max-width: 768px) {
   .modal-image {
-    max-width: 90%;    /* +50% bigger on mobile */
+    width: 95vw;        /* clearly bigger than card */
   }
 }
 

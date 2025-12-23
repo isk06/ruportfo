@@ -11,15 +11,14 @@ export default function ProjectCard({ image }: ProjectCardProps) {
 
   return (
     <>
+      {/* CARD */}
       <div className="card" onClick={() => setOpen(true)}>
         <img src={image} alt="Project image" />
       </div>
 
+      {/* MODAL */}
       {open && (
-        <div
-          className="modal-overlay"
-          onClick={() => setOpen(false)}
-        >
+        <div className="modal-overlay" onClick={() => setOpen(false)}>
           <img
             src={image}
             alt="Full view"
