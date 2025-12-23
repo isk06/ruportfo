@@ -34,8 +34,8 @@ export default function HomePage() {
             </p>
           </div>
           <div className="hero-socials">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-            <a href="https://www.behance.net" target="_blank" rel="noreferrer">Be</a>
+            <a href="http://www.linkedin.com/in/iskdaraev" target="_blank" rel="noreferrer">in</a>
+            <a href="http://www.behance.net/iskdaraev" target="_blank" rel="noreferrer">Be</a>
           </div>
         </div>
       </section>
