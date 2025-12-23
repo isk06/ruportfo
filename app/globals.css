@@ -310,7 +310,7 @@ a:hover {
 .works-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 16px;              /* reduced from 24px */
 }
 
 /* ===============================
