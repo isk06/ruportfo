@@ -385,23 +385,40 @@ a:hover {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+  overflow: auto;
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  padding: 16px;
 }
 
-.modal-content {
-  max-width: 90vw;
+/* IMPORTANT: force modal image larger than card */
+.modal-image {
+  display: block;
+  max-width: 80vw;         /* desktop width */
   max-height: 90vh;
-}
-
-.modal-content img {
-  width: 100%;
+  width: auto;
   height: auto;
   border-radius: 8px;
   cursor: zoom-out;
 }
+
+/* ===============================
+   MOBILE — EVEN BIGGER & CENTERED
+================================ */
+
+@media (max-width: 768px) {
+  .modal-image {
+    width: 150vw;           /* clearly bigger than card */
+  }
+
+  .modal-overlay {
+    padding: 0;             /* remove extra padding for centering */
+  }
+}
+
+
 
 /* ===============================
    PDF CARD CAPTION
