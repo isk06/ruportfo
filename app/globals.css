@@ -423,7 +423,7 @@ a:hover {
   color: #1f6fff;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 .pdf-arrow {
