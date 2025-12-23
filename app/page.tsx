@@ -32,7 +32,7 @@ export default function HomePage() {
     <img
       src="/icons/linkedin.svg"   // your file path
       alt="LinkedIn"
-      style={{ width: 24, height: 24 }}
+      style={{ width: 5, height: 5 }}
     />
   </a>
 
@@ -44,7 +44,7 @@ export default function HomePage() {
     <img
       src="/icons/behance.svg"    // your file path
       alt="Behance"
-      style={{ width: 24, height: 24 }}
+      style={{ width: 5, height: 5 }}
     />
   </a>
 </div>
