@@ -66,7 +66,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
                 key={img}
                 title={`Image ${i + 1}`}
                 image={`/images/${img}`}
-                /*description="Presentation design project example."*/
+                description="Presentation design project example."
               />
             ))}
           </div>
