@@ -17,7 +17,12 @@ export default function ProjectCard({ image }: ProjectCardProps) {
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal-content">
-            <img src={image} alt="Full size" />
+            {/* Scale image 40% smaller */}
+            <img
+              src={image}
+              alt="Full size"
+              style={{ transform: "scale(0.6)" }}
+            />
           </div>
         </div>
       )}
