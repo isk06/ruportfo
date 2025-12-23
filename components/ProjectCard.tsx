@@ -24,14 +24,15 @@ export default function ProjectCard({ image }: ProjectCardProps) {
             justifyContent: "center",
           }}
         >
-          <div
-            className="modal-content"
-            style={{
-              transform: "scale(0.6)",
-              transformOrigin: "center",
-            }}
-          >
-            <img src={image} alt="Full size" />
+          <div className="modal-content">
+            <img
+              src={image}
+              alt="Full size"
+              style={{
+                width: "60%",      // 40% smaller
+                height: "auto",    // maintain aspect ratio
+              }}
+            />
           </div>
         </div>
       )}
