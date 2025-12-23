@@ -35,8 +35,8 @@ export default function ProjectCard({ image }: ProjectCardProps) {
               src={image}
               alt="Full size"
               style={{
-                width: "60%",           // scale down to 60%
-                maxWidth: "100%",       // never exceed viewport width
+                width: "80%",           // scale down to 60%
+                maxWidth: "80%",       // never exceed viewport width
                 maxHeight: "90vh",      // never exceed viewport height
                 height: "auto",
                 margin: "0 auto",
