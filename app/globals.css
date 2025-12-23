@@ -335,8 +335,10 @@ a:hover {
 
 .card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
 
 .card-caption {

@@ -8,7 +8,11 @@ type PdfCardProps = {
 export default function PdfCard({ file, cover }: PdfCardProps) {
   return (
     <div className="card">
-      <img src={cover} alt="PDF cover" loading="lazy" />
+      <img
+        src={cover}
+        alt="Presentation cover"
+        loading="lazy"
+      />
     </div>
   );
 }

@@ -5,8 +5,8 @@ import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
 
 export type PdfData = {
-  file: string;   // path to PDF
-  cover: string;  // path to PDF cover image
+  file: string;
+  cover: string;
 };
 
 type PortfolioTabsProps = {
@@ -24,24 +24,21 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
   useEffect(() => {
     if (!anchorRef.current) return;
 
-    // Capture the initial position of the sticky header
     freezePoint.current =
       anchorRef.current.getBoundingClientRect().top + window.scrollY;
 
-    const handleScroll = () => {
+    const onScroll = () => {
       setIsFixed(window.scrollY >= freezePoint.current);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
-      {/* Invisible anchor to maintain layout */}
       <div ref={anchorRef} />
 
-      {/* Sticky Tabs Header */}
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>My works</h2>
         <div className="works-tabs">
@@ -60,7 +57,6 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
         </div>
       </div>
 
-      {/* Portfolio Content */}
       <div className="works-content">
         {activeTab === "gallery" && (
           <div className="works-grid">
