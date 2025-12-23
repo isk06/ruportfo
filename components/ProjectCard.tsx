@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from "react";
 
 type ProjectCardProps = {
@@ -6,44 +7,44 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({ image }: ProjectCardProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div className="card" onClick={() => setIsModalOpen(true)}>
-        <img src={image} alt="Portfolio project" />
+      {/* CARD */}
+      <div className="card" onClick={() => setOpen(true)}>
+        <img src={image} alt="Project image" />
       </div>
 
-      {isModalOpen && (
+      {/* MODAL */}
+      {open && (
         <div
           className="modal-overlay"
-          onClick={() => setIsModalOpen(false)}
+          onClick={() => setOpen(false)}
           style={{
             position: "fixed",
             inset: 0,
             background: "rgba(0,0,0,0.75)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "auto", // allow scrolling if content is too large
             zIndex: 1000,
-            padding: "20px",
+            overflow: "auto",
+            padding: "40px",
           }}
         >
-          <div className="modal-content" style={{ textAlign: "center" }}>
-            <img
-              src={image}
-              alt="Full size"
-              style={{
-                width: "100%",           // scale down to 60%
-                maxWidth: "100%",       // never exceed viewport width
-                maxHeight: "90vh",      // never exceed viewport height
-                height: "auto",
-                margin: "0 auto",
-                display: "block",
-              }}
-            />
-          </div>
+          <img
+            src={image}
+            alt="Full view"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              display: "block",
+              margin: "0 auto",
+              maxWidth: "60%",      // 40% smaller than before
+              maxHeight: "90vh",
+              width: "auto",
+              height: "auto",
+              borderRadius: "8px",
+              cursor: "zoom-out",
+            }}
+          />
         </div>
       )}
     </>
