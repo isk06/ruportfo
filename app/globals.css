@@ -407,7 +407,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .modal-image {
-    max-width: 150%;    /* +50% bigger on mobile */
+    max-width: 100%;    /* +50% bigger on mobile */
   }
 }
 
