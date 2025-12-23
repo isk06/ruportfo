@@ -7,12 +7,12 @@ type PdfCardProps = {
 
 export default function PdfCard({ file, cover }: PdfCardProps) {
   return (
-    <div className="card">
-      <img
-        src={cover}
-        alt="Presentation cover"
-        loading="lazy"
-      />
+    <div
+      className="card"
+      style={{ cursor: "pointer" }}
+      onClick={() => window.open(file, "_blank")}
+    >
+      <img src={cover} alt="Presentation cover" />
     </div>
   );
 }
