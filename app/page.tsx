@@ -4,7 +4,7 @@ import PortfolioTabs from "../components/PortfolioTabs";
 import Footer from "../components/Footer";
 
 export default function HomePage() {
-  /* ---------- IMAGES ---------- */
+  /* ================= IMAGES ================= */
   const imagesDir = path.join(process.cwd(), "public/images");
   const imageFiles = fs.existsSync(imagesDir)
     ? fs
@@ -13,7 +13,7 @@ export default function HomePage() {
         .sort()
     : [];
 
-  /* ---------- PDFS ---------- */
+  /* ================= PDFS ================= */
   const pdfsDir = path.join(process.cwd(), "public/pdfs");
   const pdfFiles = fs.existsSync(pdfsDir)
     ? fs
@@ -24,10 +24,10 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ================= HERO / HEADER ================= */}
+      {/* ================= HERO ================= */}
       <section className="hero hero-gray">
         <div className="hero-content">
-          {/* Logo (optional) */}
+          {/* Avatar */}
           <div className="hero-logo">
             <img
               src="/avatar.png"
@@ -36,8 +36,7 @@ export default function HomePage() {
             />
           </div>
 
-
-          {/* Name & subtitle */}
+          {/* Name */}
           <div>
             <h1 className="hero-title">Iskander Daraev</h1>
             <p className="hero-subtitle">
@@ -45,12 +44,13 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Social links */}
+          {/* Socials */}
           <div className="hero-socials">
             <a
               href="https://www.linkedin.com"
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn"
             >
               in
             </a>
@@ -58,6 +58,7 @@ export default function HomePage() {
               href="https://www.behance.net"
               target="_blank"
               rel="noreferrer"
+              aria-label="Behance"
             >
               Be
             </a>
@@ -65,7 +66,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= ABOUT ME ================= */}
+      {/* ================= ABOUT ================= */}
       <section className="section">
         <h2>About me</h2>
         <p className="about">
@@ -86,15 +87,9 @@ export default function HomePage() {
 
       {/* ================= WORKS ================= */}
       <section className="section">
-        <div className="portfolio-wrapper">
-          {/* title + tabs will be sticky */}
-          <PortfolioTabs
-            images={imageFiles}
-            pdfs={pdfFiles}
-          />
-        </div>
+        {/* Tabs + grid live inside this component */}
+        <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
       </section>
-
 
       {/* ================= FOOTER ================= */}
       <Footer />
