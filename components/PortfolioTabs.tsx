@@ -19,6 +19,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
   useEffect(() => {
     if (!anchorRef.current) return;
 
+    // Capture original Y position ONCE
     freezePoint.current =
       anchorRef.current.getBoundingClientRect().top + window.scrollY;
 
@@ -32,7 +33,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
 
   return (
     <>
-      {/* Anchor to preserve layout when header becomes fixed */}
+      {/* Invisible anchor keeps layout correct */}
       <div ref={anchorRef} />
 
       {/* STICKY HEADER */}
@@ -41,14 +42,14 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
 
         <div className="works-tabs">
           <button
-            className={`tab ${activeTab === "gallery" ? "active" : ""}`}
+            className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
           >
             Portfolio (gallery)
           </button>
 
           <button
-            className={`tab ${activeTab === "pdfs" ? "active" : ""}`}
+            className={activeTab === "pdfs" ? "tab active" : "tab"}
             onClick={() => setActiveTab("pdfs")}
           >
             Portfolio (presentations)
@@ -60,10 +61,12 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
       <div className="works-content">
         {activeTab === "gallery" && (
           <div className="works-grid">
-            {images.map((img) => (
+            {images.map((img, i) => (
               <ProjectCard
                 key={img}
+                title={`Image ${i + 1}`}
                 image={`/images/${img}`}
+                description="Presentation design project example."
               />
             ))}
           </div>
@@ -71,9 +74,10 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
 
         {activeTab === "pdfs" && (
           <div className="works-grid">
-            {pdfs.map((pdf) => (
+            {pdfs.map((pdf, i) => (
               <PdfCard
                 key={pdf}
+                title={`Presentation ${i + 1}`}
                 file={`/pdfs/${pdf}`}
               />
             ))}
