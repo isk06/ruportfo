@@ -378,29 +378,37 @@ a:hover {
 }
 
 /* ===============================
-   IMAGE MODAL
+   IMAGE MODAL (DESKTOP)
 ================================ */
 
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+  overflow: auto;
+  padding: 40px;
 }
 
-.modal-content {
-  max-width: 90vw;
+.modal-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;      /* desktop size */
   max-height: 90vh;
-}
-
-.modal-content img {
-  width: 100%;
+  width: auto;
   height: auto;
   border-radius: 8px;
   cursor: zoom-out;
+}
+
+/* ===============================
+   IMAGE MODAL (MOBILE)
+================================ */
+
+@media (max-width: 768px) {
+  .modal-image {
+    max-width: 90%;    /* +50% bigger on mobile */
+  }
 }
 
 /* ===============================
