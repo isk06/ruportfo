@@ -345,7 +345,7 @@ a:hover {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid #eee;
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: zoom-in;
 
