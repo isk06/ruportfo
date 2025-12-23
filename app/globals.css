@@ -340,7 +340,16 @@ a:hover {
 }
 
 .card-caption {
-  display: none;
+  margin-top: auto;.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  cursor: zoom-in;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
