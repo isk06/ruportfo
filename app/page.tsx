@@ -34,10 +34,31 @@ export default function HomePage() {
             </p>
           </div>
           <div className="hero-socials">
-            <a href="http://www.linkedin.com/in/iskdaraev" target="_blank" rel="noreferrer">in</a>
-            <a href="http://www.behance.net/iskdaraev" target="_blank" rel="noreferrer">Be</a>
-          </div>
-        </div>
+  <a
+    href="https://www.linkedin.com/in/iskdaraev"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img
+      src="/icons/linkedin.svg"   // replace with your file path
+      alt="LinkedIn"
+      style={{ width: 24, height: 24 }}
+    />
+  </a>
+
+  <a
+    href="https://www.behance.net/iskdaraev"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img
+      src="/icons/behance.svg"    // replace with your file path
+      alt="Behance"
+      style={{ width: 24, height: 24 }}
+    />
+  </a>
+</div>
+
       </section>
 
       <section className="section">
