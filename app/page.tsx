@@ -13,8 +13,8 @@ export default function HomePage() {
     : [];
 
   const pdfFiles: PdfData[] = [
-    { file: "/pdfs/example1.pdf", cover: "/pdf-covers/example1.png" },
-    { file: "/pdfs/example2.pdf", cover: "/pdf-covers/example2.png" },
+    { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png" },
+    { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.png" },
     // Add more PDFs here
   ];
 
