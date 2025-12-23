@@ -23,33 +23,21 @@ export default function HomePage() {
   return (
     <>
       <section className="hero hero-gray">
-        <div className="hero-socials">
-  <a
-    href="http://www.linkedin.com/in/iskdaraev"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <img
-      src="/icons/linkedin.svg"   // your file path
-      alt="LinkedIn"
-      style={{ width: 100, height: 100 }}
-    />
-  </a>
-
-  <a
-    href="http://www.behance.net/iskdaraev"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <img
-      src="/icons/behance.svg"    // your file path
-      alt="Behance"
-      style={{ width: 100, height: 100 }}
-    />
-  </a>
-</div>
-
-
+        <div className="hero-content">
+          <div className="hero-logo">
+            <img src="/avatar.png" alt="Iskander Daraev" className="hero-avatar" />
+          </div>
+          <div>
+            <h1 className="hero-title">Iskander Daraev</h1>
+            <p className="hero-subtitle">
+              Consulting and Corporate Finance Presentations – Storytelling & Design
+            </p>
+          </div>
+          <div className="hero-socials">
+            <a href="http://www.linkedin.com/in/iskdaraev" target="_blank" rel="noreferrer">in</a>
+            <a href="http://www.behance.net/iskdaraev" target="_blank" rel="noreferrer">Be</a>
+          </div>
+        </div>
       </section>
 
       <section className="section">
