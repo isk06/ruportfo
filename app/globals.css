@@ -408,7 +408,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .modal-image {
-    width: 95vw;        /* clearly bigger than card */
+    width: 200vw;        /* clearly bigger than card */
   }
 }
 
