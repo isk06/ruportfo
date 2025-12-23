@@ -404,21 +404,26 @@ a:hover {
 }
 
 /* ===============================
-   PDF CARD CAPTION
+   PDF CARD ADJUSTMENTS
 ================================ */
 
+/* make pdf cards slightly smaller */
 .pdf-card {
   cursor: pointer;
+  transform: scale(0.8);            /* reduce size by 20% */
+  transform-origin: top center;
 }
 
+/* ensure caption is always at the bottom */
 .pdf-caption {
-  margin-top: 4px;            /* reduced spacing */
-  padding: 10px 16px;         /* tighter vertical padding */
+  margin-top: auto;                 /* push caption to bottom */
+  padding: 10px 16px;
   background: #ffffff;
 }
 
+/* caption text */
 .pdf-open {
-  font-size: 14px;            /* slightly bigger */
+  font-size: 14px;
   font-weight: 500;
   color: #1f6fff;
   display: inline-flex;
@@ -426,6 +431,7 @@ a:hover {
   gap: 6px;
 }
 
+/* arrow animation */
 .pdf-arrow {
   transition: transform 0.2s ease;
 }
@@ -433,6 +439,7 @@ a:hover {
 .pdf-card:hover .pdf-arrow {
   transform: translateX(4px);
 }
+
 
 
 
