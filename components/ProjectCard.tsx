@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type ProjectCardProps = {
   image: string;
@@ -7,6 +7,25 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ image }: ProjectCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      requestAnimationFrame(() => setVisible(true));
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
+
+  const closeModal = () => {
+    setVisible(false);
+    setTimeout(() => setIsModalOpen(false), 200);
+  };
 
   return (
     <>
@@ -17,7 +36,7 @@ export default function ProjectCard({ image }: ProjectCardProps) {
       {isModalOpen && (
         <div
           className="modal-overlay"
-          onClick={() => setIsModalOpen(false)}
+          onClick={closeModal}
           style={{
             position: "fixed",
             inset: 0,
@@ -25,25 +44,29 @@ export default function ProjectCard({ image }: ProjectCardProps) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            overflow: "auto", // allow scrolling if content is too large
+            overflow: "auto",
             zIndex: 1000,
-            padding: "20px",
+            padding: "24px",
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.25s ease",
           }}
         >
-          <div className="modal-content" style={{ textAlign: "center" }}>
-            <img
-              src={image}
-              alt="Full size"
-              style={{
-                width: "90%",           // scale down to 60%
-                maxWidth: "100%",       // never exceed viewport width
-                maxHeight: "90vh",      // never exceed viewport height
-                height: "auto",
-                margin: "0 auto",
-                display: "block",
-              }}
-            />
-          </div>
+          <img
+            src={image}
+            alt="Full size"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "100%",
+              maxWidth: "100%",
+              maxHeight: "90vh",
+              height: "auto",
+              display: "block",
+              margin: "0 auto",
+              borderRadius: "8px",
+              transform: visible ? "scale(1)" : "scale(0.96)",
+              transition: "transform 0.25s ease",
+            }}
+          />
         </div>
       )}
     </>
