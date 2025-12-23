@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import PortfolioTabs, { PdfData } from "../components/PortfolioTabs";
+import PortfolioTabs from "../components/PortfolioTabs";
 import Footer from "../components/Footer";
 
 export default function HomePage() {
@@ -13,20 +13,21 @@ export default function HomePage() {
         .sort()
     : [];
 
-  /* ---------- PDFS with custom covers ---------- */
-  // Place your covers in public/pdf-covers/
-  const pdfFiles: PdfData[] = [
-    { file: "/pdfs/example1.pdf", cover: "/pdf-covers/example1.png" },
-    { file: "/pdfs/example2.pdf", cover: "/pdf-covers/example2.png" },
-    // Add more PDFs here
-  ];
+  /* ---------- PDFS ---------- */
+  const pdfsDir = path.join(process.cwd(), "public/pdfs");
+  const pdfFiles = fs.existsSync(pdfsDir)
+    ? fs
+        .readdirSync(pdfsDir)
+        .filter((file) => /\.pdf$/i.test(file))
+        .sort()
+    : [];
 
   return (
     <>
       {/* ================= HERO / HEADER ================= */}
       <section className="hero hero-gray">
         <div className="hero-content">
-          {/* Logo */}
+          {/* Logo (optional) */}
           <div className="hero-logo">
             <img
               src="/avatar.png"
@@ -34,6 +35,7 @@ export default function HomePage() {
               className="hero-avatar"
             />
           </div>
+
 
           {/* Name & subtitle */}
           <div>
@@ -45,10 +47,18 @@ export default function HomePage() {
 
           {/* Social links */}
           <div className="hero-socials">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               in
             </a>
-            <a href="https://www.behance.net" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.behance.net"
+              target="_blank"
+              rel="noreferrer"
+            >
               Be
             </a>
           </div>
@@ -84,6 +94,7 @@ export default function HomePage() {
           />
         </div>
       </section>
+
 
       {/* ================= FOOTER ================= */}
       <Footer />

@@ -335,10 +335,8 @@ a:hover {
 
 .card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transition: transform 0.4s ease;
 }
 
 .card-caption {
@@ -354,8 +352,9 @@ a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card:hover img {
-  transform: scale(1.06);
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* image container behavior */
@@ -366,11 +365,6 @@ a:hover {
   display: block;
 
   transition: transform 0.4s ease;
-}
-
-/* PDF covers */
-.pdf-card {
-  cursor: pointer;
 }
 
 /* magnify on hover */
