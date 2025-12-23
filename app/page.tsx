@@ -16,9 +16,8 @@ export default function HomePage() {
   /* Example: replace your existing pdfFiles array with this */
 
 const pdfFiles = [
-  { file: "/pdfs/example1.pdf", cover: "/pdfs/covers/example1.png" },
-  { file: "/pdfs/example2.pdf", cover: "/pdfs/covers/example2.png" },
-  { file: "/pdfs/example3.pdf", cover: "/pdfs/covers/example3.png" },
+  { file: "/pdfs/example1.pdf", cover: "/pdfs/covers/cover1.png" },
+  { file: "/pdfs/example2.pdf", cover: "/pdfs/covers/cver2.png" },
 ];
 
 
