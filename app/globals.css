@@ -387,37 +387,30 @@ a:hover {
   background: rgba(0, 0, 0, 0.75);
   z-index: 1000;
   overflow: auto;
-  display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: center;  /* horizontal centering */
-  padding: 16px;
+  padding: 32px 16px;
 }
 
 /* IMPORTANT: force modal image larger than card */
 .modal-image {
   display: block;
-  max-width: 80vw;         /* desktop width */
-  max-height: 90vh;
-  width: auto;
+  margin: 0 auto;
+  width: 80vw;          /* FORCE enlargement */
+  max-width: 900px;    /* safety cap for desktop */
   height: auto;
+  max-height: none;    /* allow tall images */
   border-radius: 8px;
   cursor: zoom-out;
 }
 
 /* ===============================
-   MOBILE — EVEN BIGGER & CENTERED
+   MOBILE — EVEN BIGGER
 ================================ */
 
 @media (max-width: 768px) {
   .modal-image {
-    width: 250vw;           /* clearly bigger than card */
-  }
-
-  .modal-overlay {
-    padding: 0;             /* remove extra padding for centering */
+    width: 150vw;        /* clearly bigger than card */
   }
 }
-
 
 
 /* ===============================
