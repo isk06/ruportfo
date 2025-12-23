@@ -404,6 +404,38 @@ a:hover {
 }
 
 /* ===============================
+   PDF CARD CAPTION
+================================ */
+
+.pdf-card {
+  cursor: pointer;
+}
+
+.pdf-caption {
+  margin-top: auto;
+  padding: 14px 16px;
+  background: #ffffff;
+}
+
+.pdf-open {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f6fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdf-arrow {
+  transition: transform 0.2s ease;
+}
+
+.pdf-card:hover .pdf-arrow {
+  transform: translateX(4px);
+}
+
+
+/* ===============================
    FOOTER
 ================================ */
 
