@@ -23,41 +23,32 @@ export default function HomePage() {
   return (
     <>
       <section className="hero hero-gray">
-        <div className="hero-content">
-          <div className="hero-logo">
-            <img src="/avatar.png" alt="Iskander Daraev" className="hero-avatar" />
-          </div>
-          <div>
-            <h1 className="hero-title">Iskander Daraev</h1>
-            <p className="hero-subtitle">
-              Consulting and Corporate Finance Presentations – Storytelling & Design
-            </p>
-          </div>
-          <div className="hero-socials">
+        <div className="hero-socials">
   <a
-    href="https://www.linkedin.com/in/iskdaraev"
+    href="http://www.linkedin.com/in/iskdaraev"
     target="_blank"
     rel="noreferrer"
   >
     <img
-      src="/icons/linkedin.svg"   // replace with your file path
+      src="/icons/linkedin.svg"   // your file path
       alt="LinkedIn"
       style={{ width: 24, height: 24 }}
     />
   </a>
 
   <a
-    href="https://www.behance.net/iskdaraev"
+    href="http://www.behance.net/iskdaraev"
     target="_blank"
     rel="noreferrer"
   >
     <img
-      src="/icons/behance.svg"    // replace with your file path
+      src="/icons/behance.svg"    // your file path
       alt="Behance"
       style={{ width: 24, height: 24 }}
     />
   </a>
 </div>
+
 
       </section>
 
