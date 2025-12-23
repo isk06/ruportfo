@@ -412,13 +412,13 @@ a:hover {
 }
 
 .pdf-caption {
-  margin-top: auto;
-  padding: 14px 16px;
+  margin-top: 4px;            /* reduced spacing */
+  padding: 10px 16px;         /* tighter vertical padding */
   background: #ffffff;
 }
 
 .pdf-open {
-  font-size: 13px;
+  font-size: 14px;            /* slightly bigger */
   font-weight: 500;
   color: #1f6fff;
   display: inline-flex;
@@ -433,6 +433,7 @@ a:hover {
 .pdf-card:hover .pdf-arrow {
   transform: translateX(4px);
 }
+
 
 
 /* ===============================
