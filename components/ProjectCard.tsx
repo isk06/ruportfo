@@ -19,9 +19,15 @@ export default function ProjectCard({ image }: ProjectCardProps) {
           className="modal-overlay"
           onClick={() => setIsModalOpen(false)}
           style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.75)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            overflow: "auto", // allow scrolling if content is too large
+            zIndex: 1000,
+            padding: "20px",
           }}
         >
           <div className="modal-content" style={{ textAlign: "center" }}>
@@ -29,9 +35,11 @@ export default function ProjectCard({ image }: ProjectCardProps) {
               src={image}
               alt="Full size"
               style={{
-                width: "60%",      // 40% smaller
+                width: "60%",           // scale down to 60%
+                maxWidth: "100%",       // never exceed viewport width
+                maxHeight: "90vh",      // never exceed viewport height
                 height: "auto",
-                margin: "0 auto",  // center horizontally
+                margin: "0 auto",
                 display: "block",
               }}
             />
