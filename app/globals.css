@@ -326,8 +326,6 @@ a:hover {
   flex-direction: column;
   cursor: zoom-in;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  max-width: 60%; /* reduce overall card size to ~60% */
-  margin: 0 auto; /* center smaller cards */
 }
 
 .card:hover {
@@ -361,10 +359,11 @@ a:hover {
 
 /* image container behavior */
 .card img {
-  width: 100%;
+  width: 60%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+
   transition: transform 0.4s ease;
 }
 
