@@ -1,10 +1,9 @@
 import fs from "fs";
 import path from "path";
-import PortfolioTabs from "../components/PortfolioTabs";
+import PortfolioTabs, { PdfData } from "../components/PortfolioTabs";
 import Footer from "../components/Footer";
 
 export default function HomePage() {
-  /* ---------- IMAGES ---------- */
   const imagesDir = path.join(process.cwd(), "public/images");
   const imageFiles = fs.existsSync(imagesDir)
     ? fs
@@ -13,59 +12,32 @@ export default function HomePage() {
         .sort()
     : [];
 
-  /* ---------- PDFS ---------- */
-  const pdfsDir = path.join(process.cwd(), "public/pdfs");
-  const pdfFiles = fs.existsSync(pdfsDir)
-    ? fs
-        .readdirSync(pdfsDir)
-        .filter((file) => /\.pdf$/i.test(file))
-        .sort()
-    : [];
+  const pdfFiles: PdfData[] = [
+    { file: "/pdfs/example1.pdf", cover: "/pdf-covers/example1.png" },
+    { file: "/pdfs/example2.pdf", cover: "/pdf-covers/example2.png" },
+    // Add more PDFs here
+  ];
 
   return (
     <>
-      {/* ================= HERO / HEADER ================= */}
       <section className="hero hero-gray">
         <div className="hero-content">
-          {/* Logo (optional) */}
           <div className="hero-logo">
-            <img
-              src="/avatar.png"
-              alt="Iskander Daraev"
-              className="hero-avatar"
-            />
+            <img src="/avatar.png" alt="Iskander Daraev" className="hero-avatar" />
           </div>
-
-
-          {/* Name & subtitle */}
           <div>
             <h1 className="hero-title">Iskander Daraev</h1>
             <p className="hero-subtitle">
               Consulting and Corporate Finance Presentations – Storytelling & Design
             </p>
           </div>
-
-          {/* Social links */}
           <div className="hero-socials">
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              in
-            </a>
-            <a
-              href="https://www.behance.net"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Be
-            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
+            <a href="https://www.behance.net" target="_blank" rel="noreferrer">Be</a>
           </div>
         </div>
       </section>
 
-      {/* ================= ABOUT ME ================= */}
       <section className="section">
         <h2>About me</h2>
         <p className="about">
@@ -78,25 +50,17 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* ================= CONTACT ================= */}
       <section className="section">
         <h2>Get in touch</h2>
         <p className="contact">isk.daraev@gmail.com</p>
       </section>
 
-      {/* ================= WORKS ================= */}
       <section className="section">
         <div className="portfolio-wrapper">
-          {/* title + tabs will be sticky */}
-          <PortfolioTabs
-            images={imageFiles}
-            pdfs={pdfFiles}
-          />
+          <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
         </div>
       </section>
 
-
-      {/* ================= FOOTER ================= */}
       <Footer />
     </>
   );
