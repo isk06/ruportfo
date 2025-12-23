@@ -359,7 +359,7 @@ a:hover {
 
 /* image container behavior */
 .card img {
-  width: 60%;
+  width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
@@ -397,7 +397,7 @@ a:hover {
 }
 
 .modal-content img {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-radius: 8px;
   cursor: zoom-out;
