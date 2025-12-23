@@ -23,22 +23,53 @@ export default function HomePage() {
   return (
     <>
       <section className="hero hero-gray">
-        <div className="hero-content">
-          <div className="hero-logo">
-            <img src="/avatar.png" alt="Iskander Daraev" className="hero-avatar" />
-          </div>
-          <div>
-            <h1 className="hero-title">Iskander Daraev</h1>
-            <p className="hero-subtitle">
-              Consulting and Corporate Finance Presentations – Storytelling & Design
-            </p>
-          </div>
-          <div className="hero-socials">
-            <a href="http://www.linkedin.com/in/iskdaraev" target="_blank" rel="noreferrer">in</a>
-            <a href="http://www.behance.net/iskdaraev" target="_blank" rel="noreferrer">Be</a>
-          </div>
-        </div>
-      </section>
+  <div className="hero-content">
+    {/* Logo */}
+    <div className="hero-logo">
+      <img
+        src="/avatar.png"
+        alt="Iskander Daraev"
+        className="hero-avatar"
+      />
+    </div>
+
+    {/* Name & subtitle */}
+    <div>
+      <h1 className="hero-title">Iskander Daraev</h1>
+      <p className="hero-subtitle">
+        Consulting and Corporate Finance Presentations – Storytelling & Design
+      </p>
+    </div>
+
+    {/* Social links */}
+    <div className="hero-socials">
+      <a
+        href="https://www.linkedin.com/your-profile"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/icons/linkedin.svg"
+          alt="LinkedIn"
+          style={{ width: 24, height: 24 }}
+        />
+      </a>
+
+      <a
+        href="https://www.behance.net/your-profile"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/icons/behance.svg"
+          alt="Behance"
+          style={{ width: 24, height: 24 }}
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
 
       <section className="section">
         <h2>About me</h2>
