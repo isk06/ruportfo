@@ -21,21 +21,39 @@ export default function PdfCard({ file, cover, title }: PdfCardProps) {
         className="card-image"
         style={{
           width: "100%",
-          aspectRatio: "4 / 3",
-          objectFit: "cover",
+          height: "auto",
+          objectFit: "contain",
         }}
       />
       <div
         className="card-caption"
         style={{
-          fontSize: "14px",
-          color: "#1f6fff",
-          marginTop: "4px",
-          textAlign: "center",
-          fontWeight: 500,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          justifyContent: "flex-end",
+          padding: "8px 12px",
+          gap: "4px",
         }}
       >
-        {title} → Open pdf
+        <span
+          style={{
+            fontSize: "14px",
+            fontWeight: 500,
+            color: "#111",
+          }}
+        >
+          {title}
+        </span>
+        <span
+          style={{
+            fontSize: "14px",
+            fontWeight: 500,
+            color: "#1f6fff",
+          }}
+        >
+          Open pdf →
+        </span>
       </div>
     </a>
   );
