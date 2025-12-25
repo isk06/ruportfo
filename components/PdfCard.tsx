@@ -1,33 +1,26 @@
-"use client";
+'use client';
 
 type PdfCardProps = {
   file: string;
   cover: string;
-  title: string;
+  title: string
 };
 
-export default function PdfCard({ file, cover, title }: PdfCardProps) {
+export default function PdfCard({ file, cover }: PdfCardProps) {
   return (
     <a
       href={file}
       target="_blank"
       rel="noopener noreferrer"
-      className="pdf-card"
+      className="card pdf-card"
+      style={{ cursor: "pointer" }}
     >
-      <div className="pdf-image-wrapper">
-        <img
-          src={cover}
-          alt={title}
-          className="pdf-image"
-          loading="lazy"
-        />
-      </div>
+      <img src={cover} alt="PDF cover" />
 
       <div className="pdf-caption">
-        <div className="pdf-title">{title}</div>
-        <div className="pdf-open">
-          Open pdf →
-        </div>
+        <span className="pdf-open">
+          Open pdf <span className="pdf-arrow">→</span>
+        </span>
       </div>
     </a>
   );
