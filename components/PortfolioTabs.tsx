@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
 
 export type PdfData = {
-  file: string;   // path to PDF
-  cover: string;  // path to PDF cover image
+  file: string;
+  cover: string;
+  title: string;
 };
 
 type PortfolioTabsProps = {
@@ -41,15 +42,17 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
 
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>My works</h2>
+
         <div className="works-tabs">
           <button
-            className={activeTab === "gallery" ? "tab active" : "tab"}
+            className={`tab ${activeTab === "gallery" ? "active" : ""}`}
             onClick={() => setActiveTab("gallery")}
           >
             Portfolio (gallery)
           </button>
+
           <button
-            className={activeTab === "pdfs" ? "tab active" : "tab"}
+            className={`tab ${activeTab === "pdfs" ? "active" : ""}`}
             onClick={() => setActiveTab("pdfs")}
           >
             Portfolio (presentations)
@@ -61,7 +64,10 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
         {activeTab === "gallery" && (
           <div className="works-grid">
             {images.map((img) => (
-              <ProjectCard key={img} image={`/images/${img}`} />
+              <ProjectCard
+                key={img}
+                image={`/images/${img}`}
+              />
             ))}
           </div>
         )}
@@ -69,7 +75,12 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
         {activeTab === "pdfs" && (
           <div className="works-grid">
             {pdfs.map((pdf) => (
-              <PdfCard key={pdf.file} file={pdf.file} cover={pdf.cover} />
+              <PdfCard
+                key={pdf.file}
+                file={pdf.file}
+                cover={pdf.cover}
+                title={pdf.title}
+              />
             ))}
           </div>
         )}

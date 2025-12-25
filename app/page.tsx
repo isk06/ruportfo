@@ -12,11 +12,23 @@ export default function HomePage() {
         .sort()
     : [];
 
-  const pdfFiles: PdfData[] = [
-    { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png" },
-    { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.png" },
-    { file: "/pdfs/Airbus.pdf", cover: "/pdf-covers/Airbus.png" },
-    { file: "/pdfs/Sorwe.pdf", cover: "/pdf-covers/Sorwe.png" },
+  const pdfFiles = [
+    { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", 
+      cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png",
+      title: "J.P.Morgan - SCR storytelling"},
+
+    { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", 
+      cover: "/pdf-covers/Portfolio_I.Daraev_2025.png",
+      title: "My Portfolio"},
+
+    { file: "/pdfs/Airbus.pdf", 
+      cover: "/pdf-covers/Airbus.png",
+      title: "Airbus"},
+
+    { file: "/pdfs/Sorwe.pdf", 
+      cover: "/pdf-covers/Sorwe.png",
+      title: "Sorwe"},
+
     // Add more PDFs here
   ];
 
