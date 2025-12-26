@@ -56,7 +56,7 @@ export default function HomePage() {
     {/* Social links */}
     <div className="hero-socials">
       <a
-        href="https://www.linkedin.com/your-profile"
+        href="https://www.linkedin.com/in/iskdaraev/"
         target="_blank"
         rel="noreferrer"
       >
@@ -68,7 +68,7 @@ export default function HomePage() {
       </a>
 
       <a
-        href="https://www.behance.net/your-profile"
+        href="https://www.behance.net/iskdaraev"
         target="_blank"
         rel="noreferrer"
       >
