@@ -68,7 +68,7 @@ export default function HomePage() {
       </a>
 
       <a
-        href="https://www.behance.net/iskdaraev"
+        href="https://www.google.com"
         target="_blank"
         rel="noreferrer"
       >
