@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Iskander Daraev",
+  title: "Iskander Daraev - portfolio",
   description: "Consulting and Corporate Finance Presentations",
   robots: {
     index: false,
