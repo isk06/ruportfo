@@ -78,6 +78,19 @@ export default function HomePage() {
           style={{ width: 200, height: 200 }}
         />
       </a>
+
+      <a
+        href="mailto:isk.daraev@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="/icons/mail.svg"
+          alt="E-mail"
+          style={{ width: 200, height: 200 }}
+        />
+      </a>
+
     </div>
   </div>
 </section>
