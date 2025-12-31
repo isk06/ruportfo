@@ -108,10 +108,10 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="section">
+      {/* <section className="section">
         <h2>Get in touch</h2>
         <p className="contact">isk.daraev@gmail.com</p>
-      </section>
+      </section> */}
 
       <section className="section">
         <div className="portfolio-wrapper">
