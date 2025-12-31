@@ -85,7 +85,7 @@ export default function HomePage() {
         rel="noreferrer"
       >
         <img
-          src="/icons/mail3.svg"
+          src="/icons/mail4.svg"
           alt="E-mail"
           style={{ width: 230, height: 230 }}
         />
