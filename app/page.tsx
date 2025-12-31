@@ -87,7 +87,7 @@ export default function HomePage() {
         <img
           src="/icons/mail.svg"
           alt="E-mail"
-          style={{ width: 190, height: 200 }}
+          style={{ width: 230, height: 230 }}
         />
       </a>
 
