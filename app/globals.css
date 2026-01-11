@@ -493,3 +493,76 @@ a:hover {
   }
 }
 
+/* ===============================
+   CONTACT FORM 12012026
+================================ */
+
+.contact-section {
+  margin-top: 48px;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin-top: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.form-group label span {
+  color: #2563eb;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-submit {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+  }
+}
+

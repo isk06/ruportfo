@@ -113,6 +113,39 @@ export default function HomePage() {
         <p className="contact">isk.daraev@gmail.com</p>
       </section> */}
 
+    {/* ================= GET IN TOUCH ================= */}
+      <section className="section contact-section">
+        <h2>Get in touch</h2>
+
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/xpqqzaww"
+          method="POST"
+        >
+          <div className="form-group">
+            <label>
+              Name<span>*</span>
+            </label>
+            <input type="text" name="name" required />
+          </div>
+
+          <div className="form-group">
+            <label>E-mail</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div className="form-group">
+            <label>Message</label>
+            <textarea name="message" rows={5} required />
+          </div>
+
+          <button type="submit" className="form-submit">
+            Send message →
+          </button>
+        </form>
+      </section>
+
+
       <section className="section">
         <div className="portfolio-wrapper">
           <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
