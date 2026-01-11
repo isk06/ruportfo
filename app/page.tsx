@@ -123,32 +123,39 @@ export default function HomePage() {
       <section className="section contact-section">
         <h2>Get in touch</h2>
 
-        <form
-          className="contact-form"
-          action="https://formspree.io/f/xpqqzaww"
-          method="POST"
-        >
-          <div className="form-group">
-            <label>
-              Name<span>*</span>
-            </label>
-            <input type="text" name="name" required />
-          </div>
+      <form
+        className="contact-form"
+        action="https://formsubmit.co/isk.daraev@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New message from portfolio site" />
+        <input type="hidden" name="_captcha" value="false" />
 
-          <div className="form-group">
-            <label>E-mail</label>
-            <input type="email" name="email" />
-          </div>
+        <div className="form-group">
+          <label>
+            Name<span>*</span>
+          </label>
+          <input type="text" name="name" required />
+        </div>
 
-          <div className="form-group">
-            <label>Message</label>
-            <textarea name="message" rows={5} required />
-          </div>
+        <div className="form-group">
+          <label>
+            E-mail<span>*</span>
+          </label>
+          <input type="email" name="email" required />
+        </div>
 
-          <button type="submit" className="form-submit">
-            Send message →
-          </button>
-        </form>
+        <div className="form-group">
+          <label>
+            Message<span>*</span>
+          </label>
+          <textarea name="message" rows={5} required />
+        </div>
+
+        <button type="submit" className="form-submit">
+          Send message →
+        </button>
+      </form>
       </section>
 
       
