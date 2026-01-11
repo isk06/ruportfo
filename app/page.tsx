@@ -125,12 +125,9 @@ export default function HomePage() {
 
       <form
         className="contact-form"
-        action="https://formsubmit.co/isk.daraev@gmail.com"
+        action="https://formspree.io/f/xpqqzaww"
         method="POST"
       >
-        <input type="hidden" name="_subject" value="New message from portfolio site" />
-        <input type="hidden" name="_captcha" value="false" />
-
         <div className="form-group">
           <label>
             Name<span>*</span>
@@ -156,6 +153,7 @@ export default function HomePage() {
           Send message →
         </button>
       </form>
+
       </section>
 
       
