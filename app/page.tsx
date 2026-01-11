@@ -113,6 +113,12 @@ export default function HomePage() {
         <p className="contact">isk.daraev@gmail.com</p>
       </section> */}
 
+      <section className="section">
+        <div className="portfolio-wrapper">
+          <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
+        </div>
+      </section>
+
     {/* ================= GET IN TOUCH ================= */}
       <section className="section contact-section">
         <h2>Get in touch</h2>
@@ -145,12 +151,7 @@ export default function HomePage() {
         </form>
       </section>
 
-
-      <section className="section">
-        <div className="portfolio-wrapper">
-          <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
-        </div>
-      </section>
+      
 
       <Footer />
     </>
