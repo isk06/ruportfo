@@ -556,6 +556,49 @@ a:hover {
 }
 
 /* ===============================
+   CONTACT FORM BUTTON
+================================ */
+
+.form-submit {
+  margin-top: 12px;
+  padding: 12px 20px;
+
+  background: #1f6fff;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.form-submit:hover {
+  background: #1a58cc;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(31, 111, 255, 0.25);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+
+
+/* ===============================
    MOBILE
 ================================ */
 
