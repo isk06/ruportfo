@@ -15,12 +15,11 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Manrope",
-    Manrope, Inter, Helvetica, Arial, sans-serif;
   background: #ffffff;
   color: #111;
   line-height: 1.6;
 }
+
 
 /* ===============================
    LINKS
