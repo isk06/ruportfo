@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
 import ImageModal from "./ImageModal";
 
-type PdfData = {
+export type PdfData = {
   file: string;
   cover: string;
   title: string;
