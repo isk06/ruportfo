@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
 import { useEffect, useRef } from "react";
 
 type Props = {
   images: string[];
-  index: number;
+  currentIndex: number;
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
@@ -12,60 +12,68 @@ type Props = {
 
 export default function ImageModal({
   images,
-  index,
+  currentIndex,
   onClose,
   onPrev,
   onNext,
 }: Props) {
-  const touchStartX = useRef<number | null>(null);
+  const startX = useRef<number | null>(null);
 
+  /* ================= Keyboard ================= */
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft") onPrev();
       if (e.key === "ArrowRight") onNext();
-      if (e.key === "Escape") onClose();
     };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [onClose, onPrev, onNext]);
 
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onPrev, onNext, onClose]);
-
+  /* ================= Touch (mobile swipe) ================= */
   const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
+    startX.current = e.touches[0].clientX;
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-
-    const delta =
-      e.changedTouches[0].clientX - touchStartX.current;
-
-    if (Math.abs(delta) > 50) {
-      delta > 0 ? onPrev() : onNext();
-    }
-
-    touchStartX.current = null;
+    if (startX.current === null) return;
+    const diff = startX.current - e.changedTouches[0].clientX;
+    if (diff > 50) onNext();
+    if (diff < -50) onPrev();
+    startX.current = null;
   };
 
   return (
-    <div
-      className="modal-overlay"
-      onClick={onClose}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-    >
-      <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
+    <div className="modal-overlay" onClick={onClose}>
+      <div
+        className="modal-content"
+        onClick={(e) => e.stopPropagation()}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
+        {/* LEFT ARROW */}
+        <button
+          className="modal-arrow modal-arrow-left"
+          onClick={onPrev}
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+
+        {/* IMAGE */}
         <img
-          src={images[index]}
-          className="modal-image"
+          src={`/images/${images[currentIndex]}`}
           alt=""
+          className="modal-image"
         />
 
-        <button className="modal-arrow left" onClick={onPrev}>
-          ←
-        </button>
-        <button className="modal-arrow right" onClick={onNext}>
-          →
+        {/* RIGHT ARROW */}
+        <button
+          className="modal-arrow modal-arrow-right"
+          onClick={onNext}
+          aria-label="Next image"
+        >
+          ›
         </button>
       </div>
     </div>
