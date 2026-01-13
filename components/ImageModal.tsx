@@ -25,8 +25,14 @@ export default function ImageModal({
       if (e.key === "ArrowLeft") onPrev();
       if (e.key === "ArrowRight") onNext();
     };
+
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
+    };
   }, [onClose, onPrev, onNext]);
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -43,34 +49,38 @@ export default function ImageModal({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div
-        className="modal-content"
-        onClick={(e) => e.stopPropagation()}
+      {/* arrows are fixed to viewport center */}
+      <button
+        className="modal-arrow modal-arrow-left"
+        onClick={(e) => {
+          e.stopPropagation();
+          onPrev();
+        }}
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+
+      <button
+        className="modal-arrow modal-arrow-right"
+        onClick={(e) => {
+          e.stopPropagation();
+          onNext();
+        }}
+        aria-label="Next image"
+      >
+        ›
+      </button>
+
+      {/* clicking image closes modal */}
+      <img
+        src={images[index]}
+        alt=""
+        className="modal-image"
+        onClick={onClose}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
-      >
-        <button
-          className="modal-arrow modal-arrow-left"
-          onClick={onPrev}
-          aria-label="Previous image"
-        >
-          ‹
-        </button>
-
-        <img
-          src={images[index]}
-          alt=""
-          className="modal-image"
-        />
-
-        <button
-          className="modal-arrow modal-arrow-right"
-          onClick={onNext}
-          aria-label="Next image"
-        >
-          ›
-        </button>
-      </div>
+      />
     </div>
   );
 }
