@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   images: string[];
-  currentIndex: number;
+  index: number;
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
@@ -12,14 +12,13 @@ type Props = {
 
 export default function ImageModal({
   images,
-  currentIndex,
+  index,
   onClose,
   onPrev,
   onNext,
 }: Props) {
   const startX = useRef<number | null>(null);
 
-  /* ================= Keyboard ================= */
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -30,7 +29,6 @@ export default function ImageModal({
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose, onPrev, onNext]);
 
-  /* ================= Touch (mobile swipe) ================= */
   const onTouchStart = (e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX;
   };
@@ -51,7 +49,6 @@ export default function ImageModal({
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        {/* LEFT ARROW */}
         <button
           className="modal-arrow modal-arrow-left"
           onClick={onPrev}
@@ -60,14 +57,12 @@ export default function ImageModal({
           ‹
         </button>
 
-        {/* IMAGE */}
         <img
-          src={`/images/${images[currentIndex]}`}
+          src={images[index]}
           alt=""
           className="modal-image"
         />
 
-        {/* RIGHT ARROW */}
         <button
           className="modal-arrow modal-arrow-right"
           onClick={onNext}
