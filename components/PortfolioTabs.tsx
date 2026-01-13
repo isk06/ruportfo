@@ -1,23 +1,26 @@
-"use client";
+'use client';
 
 import { useState, useEffect, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import PdfCard from "./PdfCard";
+import ImageModal from "./ImageModal";
 
-export type PdfData = {
+type PdfData = {
   file: string;
   cover: string;
   title: string;
 };
 
-type PortfolioTabsProps = {
+type Props = {
   images: string[];
   pdfs: PdfData[];
 };
 
-export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
+export default function PortfolioTabs({ images, pdfs }: Props) {
   const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
   const [isFixed, setIsFixed] = useState(false);
+
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
 
   const anchorRef = useRef<HTMLDivElement>(null);
   const freezePoint = useRef<number>(0);
@@ -42,17 +45,15 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
 
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>My works</h2>
-
         <div className="works-tabs">
           <button
-            className={`tab ${activeTab === "gallery" ? "active" : ""}`}
+            className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
           >
             Portfolio (gallery)
           </button>
-
           <button
-            className={`tab ${activeTab === "pdfs" ? "active" : ""}`}
+            className={activeTab === "pdfs" ? "tab active" : "tab"}
             onClick={() => setActiveTab("pdfs")}
           >
             Portfolio (presentations)
@@ -63,10 +64,11 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
       <div className="works-content">
         {activeTab === "gallery" && (
           <div className="works-grid">
-            {images.map((img) => (
+            {images.map((img, index) => (
               <ProjectCard
                 key={img}
                 image={`/images/${img}`}
+                onClick={() => setActiveImageIndex(index)}
               />
             ))}
           </div>
@@ -85,6 +87,22 @@ export default function PortfolioTabs({ images, pdfs }: PortfolioTabsProps) {
           </div>
         )}
       </div>
+
+      {activeImageIndex !== null && (
+        <ImageModal
+          images={images.map((img) => `/images/${img}`)}
+          index={activeImageIndex}
+          onClose={() => setActiveImageIndex(null)}
+          onPrev={() =>
+            setActiveImageIndex(
+              (i) => (i! - 1 + images.length) % images.length
+            )
+          }
+          onNext={() =>
+            setActiveImageIndex((i) => (i! + 1) % images.length)
+          }
+        />
+      )}
     </>
   );
 }

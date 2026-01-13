@@ -1,32 +1,13 @@
-'use client';
-
-import { useState } from "react";
-
-type ProjectCardProps = {
+type Props = {
   image: string;
+  onClick: () => void;
 };
 
-export default function ProjectCard({ image }: ProjectCardProps) {
-  const [open, setOpen] = useState(false);
-
+export default function ProjectCard({ image, onClick }: Props) {
   return (
-    <>
-      {/* CARD */}
-      <div className="card" onClick={() => setOpen(true)}>
-        <img src={image} alt="Project image" />
-      </div>
-
-      {/* MODAL */}
-      {open && (
-        <div className="modal-overlay" onClick={() => setOpen(false)}>
-          <img
-            src={image}
-            alt="Full view"
-            className="modal-image"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-    </>
+    <div className="card" onClick={onClick}>
+      <img src={image} alt="" />
+      <div className="card-caption" />
+    </div>
   );
 }
