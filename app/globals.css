@@ -706,3 +706,12 @@ a:hover {
   }
 }
 
+.about-list {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
