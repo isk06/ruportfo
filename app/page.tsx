@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import PortfolioTabs, { PdfData } from "../components/PortfolioTabs";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
+
 
 export default function HomePage() {
   const imagesDir = path.join(process.cwd(), "public/images");
@@ -157,6 +159,8 @@ export default function HomePage() {
       </section>
 
       
+      <BackToTop />
+
 
       <Footer />
     </>
