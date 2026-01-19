@@ -1,5 +1,11 @@
 export default function Footer() {
   return (
+    <footer className="footer footer-gray">
+      © 2025  |  This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
+    </footer>
+  );
+}
+
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-socials">
@@ -27,6 +33,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
+  
 
