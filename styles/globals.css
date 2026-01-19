@@ -115,10 +115,12 @@ h1{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
+
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
 }
+
 
 
 
