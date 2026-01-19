@@ -730,38 +730,3 @@ a:hover {
   margin-bottom: 8px;    /* spacing between list items */
 }
 
-.footer {
-  border-top: 1px solid #eee;
-  padding: 24px 0;
-  margin-top: 60px;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-socials img {
-  width: 22px;
-  height: 22px;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-.footer-socials img:hover {
-  opacity: 1;
-}
-
-.footer-copy {
-  font-size: 13px;
-  color: #888;
-}
