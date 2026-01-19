@@ -97,4 +97,47 @@ h1{
   text-align:center;
 }
 
+/* ===============================
+   FOOTER WITH SOCIAL ICONS
+================================ */
+
+.footer-gray {
+  background: #f5f5f5;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 24px 0;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #555;
+}
 
