@@ -119,6 +119,7 @@ h1{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  justify-content: right;
 }
 
 .footer-socials {
