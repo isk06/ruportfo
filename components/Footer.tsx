@@ -4,11 +4,10 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-socials">
           <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-          >
+        href="https://www.linkedin.com/in/iskdaraev/"
+        target="_blank"
+        rel="noreferrer"
+        >
             <img
           src="/icons/linkedin.svg"
           alt="LinkedIn"
@@ -18,11 +17,10 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.behance.net"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Behance"
-          >
+        href="https://www.behance.net/iskdaraev"
+        target="_blank"
+          rel="noreferrer"
+        >
             <img
           src="/icons/behance.svg"
           alt="Behance"
