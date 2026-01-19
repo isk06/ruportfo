@@ -718,3 +718,25 @@ a:hover {
   margin-bottom: 10px;
   line-height: 1.6;
 }
+
+/* ===============================
+   ABOUT ME TEXT CONSISTENCY
+================================ */
+
+.section .about,
+.section .about-list,
+.section .about-list li {
+  font-size: 15px;       /* same as your .about text */
+  color: #666;           /* same text color */
+  line-height: 1.6;
+}
+
+.section .about-list {
+  padding-left: 20px;    /* keep bullets aligned */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.section .about-list li {
+  margin-bottom: 8px;    /* spacing between list items */
+}
