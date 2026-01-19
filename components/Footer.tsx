@@ -9,7 +9,12 @@ export default function Footer() {
             rel="noreferrer"
             aria-label="LinkedIn"
           >
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+            <img
+          src="/icons/linkedin.svg"
+          alt="LinkedIn"
+          style={{ width: 200, height: 200 }}
+        />
+
           </a>
 
           <a
@@ -18,7 +23,11 @@ export default function Footer() {
             rel="noreferrer"
             aria-label="Behance"
           >
-            <img src="/icons/behance.svg" alt="Behance" />
+            <img
+          src="/icons/behance.svg"
+          alt="Behance"
+          style={{ width: 200, height: 200 }}
+        />
           </a>
         </div>
 
