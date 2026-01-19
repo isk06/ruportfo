@@ -97,8 +97,11 @@ h1{
   text-align:center;
 }
 
+.about {
+  margin-bottom: 20px; /* controls the “red line” gap */
+}
+
 .about-list {
-  margin-top: 16px;
   padding-left: 20px;
 }
 
