@@ -55,7 +55,7 @@ export default function HomePage() {
       </p>
     </div>
 
-    {/* Social links */}
+    {/* Social links 
     <div className="hero-socials">
       <a
         href="https://www.linkedin.com/in/iskdaraev/"
@@ -93,7 +93,7 @@ export default function HomePage() {
         />
       </a>
 
-    </div>
+    </div> */}
   </div>
 </section>
 
@@ -136,7 +136,7 @@ export default function HomePage() {
       corporate finance, government economic projects, IT, industry.
     </li>
     <li>
-      Broad industry expertise, quick immersion in new industries and
+      <strong>Broad industry expertise</strong>, quick immersion in new industries and
       business chains.
     </li>
   </ul>
