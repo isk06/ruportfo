@@ -11,7 +11,7 @@ export default function Footer() {
             <img
           src="/icons/linkedin.svg"
           alt="LinkedIn"
-          style={{ width: 50, height: 50 }}
+          style={{ width: 200, height: 200 }}
         />
 
           </a>
@@ -24,14 +24,13 @@ export default function Footer() {
             <img
           src="/icons/behance.svg"
           alt="Behance"
-          style={{ width: 50, height: 50 }}
+          style={{ width: 200, height: 200 }}
         />
           </a>
         </div>
 
         <div className="footer-copy">
-          © {new Date().getFullYear()} 
-          This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
+          © {new Date().getFullYear()} This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
         </div>
       </div>
     </footer>
