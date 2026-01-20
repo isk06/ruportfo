@@ -9,7 +9,7 @@ export default function Footer() {
         rel="noreferrer"
         >
             <img
-          src="/icons/linkedin.svg"
+          src="/icons/linkedin.png"
           alt="LinkedIn"
           style={{ width: 200, height: 200 }}
         />
@@ -22,7 +22,7 @@ export default function Footer() {
           rel="noreferrer"
         >
             <img
-          src="/icons/behance.svg"
+          src="/icons/behance.png"
           alt="Behance"
           style={{ width: 200, height: 200 }}
         />
@@ -30,7 +30,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-copy">
-          © {new Date().getFullYear()} This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
+          © {new Date().getFullYear()} 
+          This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
         </div>
       </div>
     </footer>
