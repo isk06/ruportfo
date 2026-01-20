@@ -8,10 +8,10 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
         >
-            <img
+        <img
           src="/icons/linkedin.svg"
           alt="LinkedIn"
-          style={{ width: 200, height: 200 }}
+          style={{ width: 200, height: 100 }}
         />
 
           </a>
@@ -21,10 +21,10 @@ export default function Footer() {
         target="_blank"
           rel="noreferrer"
         >
-            <img
+        <img
           src="/icons/behance.svg"
           alt="Behance"
-          style={{ width: 200, height: 200 }}
+          style={{ width: 200, height: 100 }}
         />
           </a>
         </div>
