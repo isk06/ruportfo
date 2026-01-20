@@ -11,7 +11,7 @@ export default function Footer() {
             <img
           src="/icons/linkedin.png"
           alt="LinkedIn"
-          style={{ width: 200, height: 200 }}
+          style={{ width: 10, height: 10 }}
         />
 
           </a>
@@ -24,7 +24,7 @@ export default function Footer() {
             <img
           src="/icons/behance.png"
           alt="Behance"
-          style={{ width: 200, height: 200 }}
+          style={{ width: 10, height: 10 }}
         />
           </a>
         </div>
