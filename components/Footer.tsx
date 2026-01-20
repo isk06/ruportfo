@@ -9,9 +9,9 @@ export default function Footer() {
         rel="noreferrer"
         >
             <img
-          src="/icons/linkedin.png"
+          src="/icons/linkedin.svg"
           alt="LinkedIn"
-          style={{ width: 10, height: 10 }}
+          style={{ width: 50, height: 50 }}
         />
 
           </a>
@@ -22,9 +22,9 @@ export default function Footer() {
           rel="noreferrer"
         >
             <img
-          src="/icons/behance.png"
+          src="/icons/behance.svg"
           alt="Behance"
-          style={{ width: 10, height: 10 }}
+          style={{ width: 50, height: 50 }}
         />
           </a>
         </div>
