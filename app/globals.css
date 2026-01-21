@@ -503,8 +503,8 @@ a:hover {
 }
 
 .footer-socials img {
-  width: 40px;
-  height: 40px;
+  width: 10px;
+  height: 10px;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
