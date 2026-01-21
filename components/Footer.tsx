@@ -19,7 +19,8 @@ export default function Footer() {
           <a
         href="https://www.behance.net/iskdaraev"
         target="_blank"
-          rel="noreferrer"
+           rel="noopener noreferrer"
+            aria-label="LinkedIn"
         >
         <img
           src="/icons/behance.svg"
