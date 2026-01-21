@@ -466,18 +466,14 @@ a:hover {
 /* LEFT DISCLAIMER */
 .footer-left {
   max-width: 360px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.4;
   color: #555;
 }
 
 
 /* Keep center truly centered */
-.footer-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  
+.footer-inner {
   display: flex;
   align-items: center;
   position: relative;
@@ -507,14 +503,14 @@ a:hover {
 }
 
 .footer-socials img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
 
 .footer-socials img:hover {
-  opacity: 1;
+  opacity: 5;
 }
 
 
@@ -667,7 +663,7 @@ a:hover {
 
 .back-to-top {
   position: fixed;
-  bottom: 32px;
+  bottom: 80px;
   right: 32px;
 
   width: 44px;
