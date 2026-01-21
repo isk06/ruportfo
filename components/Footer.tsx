@@ -25,7 +25,6 @@ export default function Footer() {
         <img
           src="/icons/behance.svg"
           alt="Behance"
-          style={{ width: 200, height: 200 }}
         />
           </a>
         </div>
