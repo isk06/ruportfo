@@ -11,6 +11,7 @@ export default function Footer() {
         <img
           src="/icons/linkedin.svg"
           alt="LinkedIn"
+          style={{ width: 100, height: 100 }}
         />
 
           </a>
@@ -23,6 +24,7 @@ export default function Footer() {
         <img
           src="/icons/behance.svg"
           alt="Behance"
+          style={{ width: 100, height: 100 }}
         />
           </a>
         </div>
