@@ -474,18 +474,15 @@ a:hover {
 
 /* Keep center truly centered */
 .footer-inner {
-
-
   display: flex;
   align-items: center;
   position: relative;
 }
 
-/* CENTER TEXT BLOCK */
+/* Prevent center shift */
 .footer-center {
   margin: 0 auto;
   text-align: center;
-  line-height: 1.4;
 }
 
 .footer-center p {
@@ -506,7 +503,7 @@ a:hover {
 }
 
 .footer-socials img {
-  width: 40;
+  width: 40px;
   height: 40px;
   opacity: 0.6;
   transition: opacity 0.2s ease;
