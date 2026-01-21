@@ -102,7 +102,7 @@ export default function HomePage() {
   <h2>About me</h2>
 
   <p className="about">
-    Data visualization and presentation designer with 15+ years of experience
+    Dataaaaaaa visualization and presentation designer with 15+ years of experience
     in consulting and public sector. Expert in creating business-critical
     presentations, structuring large decks, and visualizing complex financial
     data. Proven ability to deliver 150+ slides/day under pressure. Strong
