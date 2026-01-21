@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer footer-gray">
       <div className="footer-content">
         <div className="footer-text">
-          © {new Date().getFullYear()} Iskander Daraev
+         © {new Date().getFullYear()} This site does not collect information about visitors or use analytics tools  |  Built with Next.js & Vercel by Iskander Daraev
         </div>
 
         <div className="footer-socials">
@@ -13,7 +13,11 @@ export default function Footer() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+            <img
+          src="/icons/linkedin.svg"
+          alt="LinkedIn"
+          style={{ width: 200, height: 200 }}
+        />
           </a>
 
           <a
@@ -21,8 +25,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Behance"
+
+            
           >
-            <img src="/icons/behance.svg" alt="Behance" />
+            <img
+          src="/icons/behance.svg"
+          alt="Behance"
+          style={{ width: 200, height: 200 }}
+        />
           </a>
         </div>
       </div>
