@@ -453,61 +453,62 @@ a:hover {
 
 /* ===============================
    FOOTER
-================================ 
-
-.footer {
-  padding: 24px 16px;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
-  border-top: 1px solid #e5e5e5;
-}
-
-.footer-gray {
-  background-color: #f5f5f5;
-} */
-
-/* ===============================
-   FOOTER
 ================================ */
 
-.footer-gray {
-  background: #f5f5f5;
-}
-
 .footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 10px 0; /* smaller height */
+  background: #f5f5f5;
+  border-top: 1px solid #e6e6e6;
+  padding: 24px 16px;
   font-size: 14px;
   color: #555;
 }
 
-.footer-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
+/* LEFT DISCLAIMER */
+.footer-left {
+  max-width: 360px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #555;
+}
+
+
+/* Keep center truly centered */
+.footer-inner {
+ 
 
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-/* LEFT: text */
-.footer-text {
+/* CENTER TEXT BLOCK */
+.footer-center {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+.footer-sub {
   font-size: 14px;
-  color: #555;
+  margin-top: 4px;
 }
 
-/* RIGHT: socials */
+/* Socials stay right */
 .footer-socials {
-  margin-left: auto; /* THIS pushes icons to the right */
+  position: absolute;
+  right: 24px;
   display: flex;
-  gap: 12px; /* tighter spacing between icons */
+  gap: 10px;
 }
 
 .footer-socials img {
-  width: 20px;
-  height: 20px;
-  opacity: 0.75;
+  width: 40;
+  height: 40px;
+  opacity: 0.6;
   transition: opacity 0.2s ease;
 }
 
