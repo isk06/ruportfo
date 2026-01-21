@@ -468,7 +468,7 @@ a:hover {
   max-width: 360px;
   font-size: 12px;
   line-height: 1.4;
-  color: #556;
+  color: #555
 }
 
 
@@ -496,7 +496,7 @@ a:hover {
 
 /* Socials stay right */
 .footer-socials {
-  position: absolute;
+  position: fixed;
   right: 24px;
   display: flex;
   gap: 10px;
