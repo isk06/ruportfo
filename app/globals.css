@@ -473,7 +473,11 @@ a:hover {
 
 
 /* Keep center truly centered */
-.footer-inner {
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  
   display: flex;
   align-items: center;
   position: relative;
@@ -503,8 +507,8 @@ a:hover {
 }
 
 .footer-socials img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
