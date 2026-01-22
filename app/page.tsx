@@ -102,12 +102,11 @@ export default function HomePage() {
   <h2>About me</h2>
 
   <p className="about">
-    Data visualization and presentation designer with 15+ years of experience
-    in consulting and public sector. Expert in creating business-critical
-    presentations, structuring large decks, and visualizing complex financial
-    data. Proven ability to deliver 150+ slides/day under pressure. Strong
-    background in economics, corporate finance, and industrial deck design.
-    Leadership experience, automation mindset (VBA), and consulting fluency.
+    Специалист по визуализации данных и разработке презентаций с 
+    более чем 15-летним опытом работы в консалтинге и государственном секторе. 
+    Эксперт в создании критически важных для бизнеса презентаций, структурировании 
+    больших презентаций и визуализации сложных финансовых данных. 
+    Обширный опыт в экономике, корпоративных финансах и разработке презентаций для промышленности.    
   </p>
 
   <ul className="about-list">
