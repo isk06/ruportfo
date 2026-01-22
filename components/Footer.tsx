@@ -5,7 +5,7 @@ export default function Footer() {
         {/* LEFT — disclaimer */}
         <div className="footer-left">
           All visuals, except icons, are designed by I. Daraev. All data research and
-          analysis performed by I. Daraev. All data used in this portfolio is taken from
+          analysis performed by I. Daraev. All data used to develop the slides is taken from
           open sources or are random figures. No client data or information constituting
           a corporate secret was used. No Excel/PowerPoint add-ins were used.
         </div>
