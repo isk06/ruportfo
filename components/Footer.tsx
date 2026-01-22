@@ -11,7 +11,7 @@ export default function Footer() {
 
         {/* CENTER — copyright */}
         <div className="footer-center">
-          <p>© 2026 | Создано с использованием Nextjs и Vercel Искандером Дараевым.</p>
+          <p>© 2025-2026 | Создано с использованием Nextjs и Vercel Искандером Дараевым.</p>
           <p className="footer-sub">
             Этот сайт не собирает информацию о посетителях и не использует аналитические инструменты.
           </p>
