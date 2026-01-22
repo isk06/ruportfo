@@ -49,9 +49,9 @@ export default function HomePage() {
 
     {/* Name & subtitle */}
     <div>
-      <h1 className="hero-title">Iskander Daraev</h1>
+      <h1 className="hero-title">Искандер Дараев</h1>
       <p className="hero-subtitle">
-        Consulting and Corporate Finance Presentations – Storytelling & Design
+        Консалтинг и корпоративные финансы – сторителлинг и дизайн
       </p>
     </div>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
 
 
 <section className="section">
-  <h2>About me</h2>
+  <h2>Обо мне</h2>
 
   <p className="about">
     Специалист по визуализации данных и разработке презентаций с 
@@ -111,32 +111,34 @@ export default function HomePage() {
 
   <ul className="about-list">
     <li>
-      <strong>Cross-specialist</strong> with experience in the public sector and consulting.
-      Extensive executive and management experience in executive bodies and
-      consulting – both design and team lead work.
+      <strong>Кросс-специалист</strong> с глубоким исполнительским и управленческим опытом 
+      в госсекторе и финансовом консалтинге - как дизайне, так и организации работы 
+      в качестве Team Lead.
     </li>
     <li>
-      <strong>Specialization:</strong> visualization of complex economic and financial data,
-      charts and metrics (Excel/PowerPoint), financial and custom diagrams,
-      storytelling (Big4, Big3), information structuring, formatting and layout
-      (Big4, Big3).
+      <strong>Специализация:</strong> визуализация сложных экономических 
+      и финансовых данных, схем и метрик (Excel/PowerPoint), 
+      финансовые и кастомные диаграммы, сторителлинг (Big4, Big3), 
+      структурирование информации, форматирование и верстка (Big4, Big3).
     </li>
     <li>
-      <strong>Products:</strong> business presentations, client reports, marketing materials
-      (proposals, memos, one-pagers, annual reports), diagrams, maps, charts.
+      <strong>Продукты:</strong> бизнес-презентации, клиентские отчеты, 
+      маркетинговые материалы (пропозалы, мемо, one pagers, годовые отчеты), 
+      диаграммы, карты, схемы.
     </li>
     <li>
-      <strong>Competencies:</strong> presentation design and formatting (C-level, marketing,
-      financial, consulting), reports, analysis and visualization, team
-      organization and process optimization.
+      <strong>Компетенции:</strong> дизайн и форматирование презентаций 
+      (C-level, маркетинговые, финансовые, консалтинговые), 
+      отчетов, анализ и визуализация, организация работы команды 
+      и оптимизация процессов.
     </li>
     <li>
-      <strong>Subject areas:</strong> strategic consulting, investment banks, fintech,
-      corporate finance, government economic projects, IT, industry.
+      <strong>Предметные области:</strong> стратегический консалтинг, инвестбанки, 
+      финтех, корпфин, государственные экономические проекты, ИТ, промышленность.
     </li>
     <li>
-      <strong>Broad industry expertise</strong>, quick immersion in new industries and
-      business chains.
+      <strong>Широта отраслевой экспертизы</strong>, быстрое погружение в новую отрасль 
+      и бизнес-цепочки.
     </li>
   </ul>
 </section>
