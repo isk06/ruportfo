@@ -4,17 +4,16 @@ export default function Footer() {
       <div className="footer-inner">
         {/* LEFT — disclaimer */}
         <div className="footer-left">
-          All visuals, except icons, are designed by XXXXXX. All data research and
-          analysis performed by I. Daraev. All data used to develop the slides is taken from
-          open sources or are random figures. No client data or information constituting
-          a corporate secret was used. No Excel/PowerPoint add-ins were used.
+          Поиск и анализ данных, разработка визуальных элементов, за исключением иконок, а также дизайн 
+          и верстка слайдов выполнены И. Дараевым. Все данные, использованные для разработки слайдов, 
+          взяты из открытых источников или представляют собой случайные данные.         
         </div>
 
         {/* CENTER — copyright */}
         <div className="footer-center">
-          <p>© 2026 | Built with Next.js & Vercel by Iskander Daraev</p>
+          <p>© 2026 | Создано с использованием Nextjs и Vercel Искандером Дараевым.</p>
           <p className="footer-sub">
-            This site does not collect information about visitors or use analytics tools
+            Этот сайт не собирает информацию о посетителях и не использует аналитические инструменты.
           </p>
         </div>
 

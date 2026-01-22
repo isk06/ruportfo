@@ -21,7 +21,7 @@ export default function RootLayout({
 
 
 export const metadata = {
-  title: "Iskander Daraev - portfolio",
+  title: "Искандер Дараев - портфолио",
   description: "Consulting and Corporate Finance Presentations",
   robots: {
     index: false,

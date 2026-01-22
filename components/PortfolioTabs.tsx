@@ -50,13 +50,13 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
             className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
           >
-            Portfolio (gallery)
+            Портфолио (галерея)
           </button>
           <button
             className={activeTab === "pdfs" ? "tab active" : "tab"}
             onClick={() => setActiveTab("pdfs")}
           >
-            Portfolio (presentations)
+            Портфолио (презентации)
           </button>
         </div>
       </div>
