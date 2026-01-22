@@ -157,7 +157,7 @@ export default function HomePage() {
 
     {/* ================= GET IN TOUCH ================= */}
       <section className="section contact-section">
-        <h2>Get in touch</h2>
+        <h2>Свяжитесь со мной</h2>
 
       <form
         className="contact-form"
@@ -166,7 +166,7 @@ export default function HomePage() {
       >
         <div className="form-group">
           <label>
-            Name<span>*</span>
+            Имя<span>*</span>
           </label>
           <input type="text" name="name" required />
         </div>
@@ -180,13 +180,13 @@ export default function HomePage() {
 
         <div className="form-group">
           <label>
-            Message<span>*</span>
+            Сообщение<span>*</span>
           </label>
           <textarea name="message" rows={5} required />
         </div>
 
         <button type="submit" className="form-submit">
-          Send message →
+          Отправить
         </button>
       </form>
 
