@@ -21,7 +21,7 @@ export default function HomePage() {
 
     { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", 
       cover: "/pdf-covers/Portfolio_I.Daraev_2025.png",
-      title: "My Portfolio"},
+      title: "Портфолио"},
 
     { file: "/pdfs/Airbus.pdf", 
       cover: "/pdf-covers/Airbus.png",
