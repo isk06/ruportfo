@@ -156,7 +156,7 @@ export default function HomePage() {
 
     {/* ================= GET IN TOUCH ================= */}
       <section className="section contact-section">
-        <h2>Свяжитесь со мной</h2>
+        <h2>Обратная связь</h2>
 
       <form
         className="contact-form"
