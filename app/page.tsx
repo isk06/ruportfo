@@ -20,7 +20,7 @@ export default function HomePage() {
       title: "J.P.Morgan - SCR storytelling"},
 
     { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", 
-      cover: "/pdf-covers/Portfolio_I.Daraev_2025.png",
+      cover: "/pdf-covers/Portfolio_I.Daraev_2025.jpg",
       title: "Портфолио"},
 
     { file: "/pdfs/Airbus.pdf", 
@@ -34,6 +34,12 @@ export default function HomePage() {
     { file: "/pdfs/EcoTank.pdf", 
       cover: "/pdf-covers/Ecotank.jpg",
       title: "EcoTank"},
+
+    { file: "/pdfs/Nature_ASI_2025.pdf", 
+      cover: "/pdf-covers/Nature_ASI_2025.jpg",
+      title: "АСИ - Концепция Единица природы"},
+
+
     // Add more PDFs here
   ];
 
