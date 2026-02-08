@@ -39,6 +39,10 @@ export default function HomePage() {
       cover: "/pdf-covers/Nature_ASI_2025.jpg",
       title: "АСИ - Концепция Единица природы"},
 
+    { file: "/pdfs/Zero.pdf", 
+      cover: "/pdf-covers/Zero.jpg",
+      title: "Zero eDiscovery"},
+
 
     // Add more PDFs here
   ];

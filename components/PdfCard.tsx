@@ -52,7 +52,7 @@ export default function PdfCard({ file, cover, title }: PdfCardProps) {
             color: "#1f6fff",
           }}
         >
-          Open pdf →
+          Открыть pdf →
         </span>
       </div>
     </a>
