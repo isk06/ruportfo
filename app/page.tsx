@@ -43,6 +43,9 @@ export default function HomePage() {
       cover: "/pdf-covers/Zero.jpg",
       title: "Zero eDiscovery"},
 
+    { file: "/pdfs/Volac.pdf", 
+      cover: "/pdf-covers/Volac.jpg",
+      title: "Volac - Board Presentation"},
 
     // Add more PDFs here
   ];
