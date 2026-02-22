@@ -47,6 +47,10 @@ export default function HomePage() {
       cover: "/pdf-covers/Volac.jpg",
       title: "Volac - Board Presentation"},
 
+    { file: "/pdfs/Idbi.pdf", 
+      cover: "/pdf-covers/Idbi.jpg",
+      title: "IDBI Bank - Investors Presentation"},
+
     // Add more PDFs here
   ];
 
