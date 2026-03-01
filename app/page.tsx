@@ -15,7 +15,7 @@ export default function HomePage() {
 
   const pdfFiles: PdfData[] = [
     { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png", title: "J.P.Morgan - SCR storytelling" },
-    { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.jpg", title: "My Portfolio" },
+    { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.jpg", title: "Мое портфолио" },
     { file: "/pdfs/Airbus.pdf", cover: "/pdf-covers/Airbus.png", title: "Airbus" },
     { file: "/pdfs/Sorwe.pdf", cover: "/pdf-covers/Sorwe.png", title: "Sorwe" },
     { file: "/pdfs/EcoTank.pdf", cover: "/pdf-covers/Ecotank.jpg", title: "EcoTank" },
