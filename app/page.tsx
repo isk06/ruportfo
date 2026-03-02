@@ -37,7 +37,7 @@ export default function HomePage() {
           <div>
             <h1 className="hero-title">Искандер Дараев</h1>
             <p className="hero-subtitle">
-              Консалтинг и корпоративные финансы – сторителлинг и дизайн
+              Банки, консалтинг и корпоративные финансы – сторителлинг и дизайн
             </p>
           </div>
         </div>
@@ -126,11 +126,11 @@ export default function HomePage() {
                 <ul className="bullet-list">
                   <li><strong>2026:</strong> Power BI, Power Query, DAX (в процессе изучения)</li>
                   <li><strong>2025:</strong> Введение в корпоративные финансы (The Wharton School of the University of Pennsylvania)</li>
-                  <li><strong>2024:</strong> Консалтинговые презентации и сторителлинг (Emory University); Бизнес-презентации в PowerPoint (PriceWaterhouseCoopers); UX/UI дизайн (Google, IBM)</li>
+                  <li><strong>2024:</strong> Консалтинговые презентации и сторителлинг (Emory University); бизнес-презентации в PowerPoint (PriceWaterhouseCoopers); UX/UI дизайн (Google, IBM)</li>
                   <li><strong>2023:</strong> Сертификат Google по автоматизации в ИТ с использованием Python (Google)</li>
                   <li><strong>2022:</strong> ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
                   ВШЭ - Python для анализа данных (очно)</li>
-                  <li><strong>2021:</strong> IELTS Academic; Структурирование бизнес-кейсов (Fless)</li>
+                  <li><strong>2021:</strong> IELTS Academic; структурирование бизнес-кейсов (Fless)</li>
                 </ul>
               </div>
 
