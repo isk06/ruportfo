@@ -784,9 +784,9 @@ a:hover {
 ================================ */
 
 .job-wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  max-width: 1600px;      /* match header width */
+  margin: 0;              /* remove centering */
+  padding: 40px 8%;       /* same horizontal padding as header */
 }
 
 .job-header {
@@ -813,8 +813,18 @@ a:hover {
 
 .job-layout {
   display: grid;
-  grid-template-columns: 900px 320px;  /* 15% wider left side */
-  gap: 30px;
+  gap: 19px;
+
+  /* New responsive grid behavior */
+  grid-template-columns: minmax(1000px, 1.0fr) minmax(250px, 0.5fr);
+
+  /* Comments:
+     - Left column minimum 700px (wide enough to avoid narrow text)
+     - Left can grow up to 1.6 fraction of remaining space
+     - Right column minimum 300px (compact sidebar)
+     - Right can grow up to 0.8 fraction (optional)
+     - Feel free to tweak min / max values as needed
+  */
 }
 
 
@@ -893,13 +903,21 @@ a:hover {
   font-size: 18px;   /* slightly smaller section titles */
 }
 
-.fact-list,
-.bullet-list,
-.company-info,
-.company-links {
-  font-size: 14px;   /* reduced body text */
+/* ===== LEFT MAIN PANE TEXT ===== */
+.job-main-card .fact-list,
+.job-main-card .bullet-list {
+  font-size: 14px;
   list-style-position: outside;
-  padding-left: 14px;   /* key facts bullet consistent indent */
+  padding-left: 14px;
+  margin: 0;
+}
+
+/* ===== RIGHT SIDEBAR TEXT ===== */
+.job-sidebar .company-info,
+.job-sidebar .company-links {
+  font-size: 14px;
+  list-style-position: outside;
+  padding-left: 50px;
   margin: 0;
 }
 
@@ -936,6 +954,153 @@ a:hover {
 
 .fact-list li::marker {
   font-size: 0.6em;
+}
+
+
+
+/* ================= PROJECT PAGE in portfolio tabs 26022026 ================= */
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 60px 8%;
+}
+
+.project-info {
+  background: #eaeaea;
+  padding: 28px;
+  border-radius: 24px;
+  position: sticky;
+  top: 120px;
+}
+
+.project-info ul {
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.project-info li {
+  margin-bottom: 10px;
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: underline;
+  color: #1f6fff;
+}
+
+/*.project-column h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}*/
+
+.project-column img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-info {
+    position: relative;
+    top: auto;
+  }
+}
+
+
+
+/* ===== GLOBAL HEADER (Aligned with Content) ===== */
+
+.global-header {
+  background: #f5f5f5;
+  padding: 40px 0;          /* remove horizontal % padding */
+}
+
+.header-inner {
+  max-width: 1100px;        /* same as main content */
+  margin: 0 auto;           /* center container */
+  padding: 0 20px;          /* controlled inner spacing */
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.header-name {
+  font-size: 28px;
+  margin: 0;
+}
+
+.header-subtitle {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #666;
+}
+
+
+/* ================= BACK BUTTON in case study ================= */
+
+/* ================= PREMIUM BACK BUTTON ================= */
+
+.back-button-wrapper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 130px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  color: #333;
+  background: #f4f4f4;
+  border: 1px solid #e5e5e5;
+
+  transition: all 0.25s ease;
+}
+
+.back-button:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  transform: translateX(-3px);
+}
+
+.project-column h3 {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 18px 0;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+  z-index: 20;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 

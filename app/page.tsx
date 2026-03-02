@@ -22,8 +22,9 @@ export default function HomePage() {
     { file: "/pdfs/Zero.pdf", cover: "/pdf-covers/Zero.jpg", title: "Zero eDiscovery" },
     { file: "/pdfs/Nature_ASI_2025.pdf", cover: "/pdf-covers/Nature_ASI_2025.jpg", title: "АСИ - Концепция Единица природы" },
     { file: "/pdfs/Volac.pdf", cover: "/pdf-covers/Volac.jpg", title: "Volac - Board Presentation" },
-    { file: "/pdfs/Idbi.pdf", cover: "/pdf-covers/Idbi.jpg", title: "IDBI Bank - Investors Presentation" },
   ];
+
+  {/* file: "/pdfs/Idbi.pdf", cover: "/pdf-covers/Idbi.jpg", title: "IDBI Bank - Investors Presentation" */}
 
   return (
     <>
