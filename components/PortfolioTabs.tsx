@@ -67,7 +67,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
       <div ref={anchorRef} />
 
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
-        <h2>My works</h2>
+        <h2>Мои работы</h2>
         <div className="works-tabs">
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
@@ -155,7 +155,7 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
                       color: "#1f6fff",
                     }}
                   >
-                    View case study →
+                    Подробнее о проекте →
                   </span>
                 </div>
               </a>

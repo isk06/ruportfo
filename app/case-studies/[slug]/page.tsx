@@ -30,13 +30,13 @@ export default function IdbiRedesign() {
             download
             className="download-link"
           >
-            Download final presentation
+            Загрузить итоговую презентацию
           </a>
         </aside>
 
         {/* BEFORE COLUMN */}
         <div className="project-column">
-          <h3>Before</h3>
+          <h3>До</h3>
           <img src="/case-studies/Idbi/before-1.png" alt="Before slide 1" />
           <img src="/case-studies/Idbi/before-2.png" alt="Before slide 2" />
           <img src="/case-studies/Idbi/before-3.png" alt="Before slide 3" />
@@ -83,7 +83,7 @@ export default function IdbiRedesign() {
 
         {/* AFTER COLUMN */}
         <div className="project-column">
-          <h3>After</h3>
+          <h3>После</h3>
           <img src="/case-studies/Idbi/after-1.png" alt="After slide 1" />
           <img src="/case-studies/Idbi/after-2.png" alt="After slide 2" />
           <img src="/case-studies/Idbi/after-3.png" alt="After slide 3" />
