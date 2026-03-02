@@ -124,6 +124,7 @@ export default function HomePage() {
               <div>
                 <h3>Дополнительное образование и сертификации</h3>
                 <ul className="bullet-list">
+                  <li><strong>2026:</strong> Power BI, Power Query, DAX (в процессе изучения)</li>
                   <li><strong>2025:</strong> Введение в корпоративные финансы (The Wharton School of the University of Pennsylvania)</li>
                   <li><strong>2024:</strong> Консалтинговые презентации и сторителлинг (Emory University); Бизнес-презентации в PowerPoint (PriceWaterhouseCoopers); UX/UI дизайн (Google, IBM)</li>
                   <li><strong>2023:</strong> Сертификат Google по автоматизации в ИТ с использованием Python (Google)</li>
