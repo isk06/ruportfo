@@ -57,8 +57,8 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
     {
       slug: "Idbi",
       cover: "/pdf-covers/Idbi.jpg",
-      title: "IDBI Bank - Investors Presentation",
-      description: "Presentation redesign and formatting"
+      title: "IDBI Bank - Презентация для инвесторов",
+      description: "Редизайн презентации и форматирование"
     }
   ];
 

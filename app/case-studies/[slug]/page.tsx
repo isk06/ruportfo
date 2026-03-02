@@ -7,7 +7,7 @@ export default function IdbiRedesign() {
       {/* BACK BUTTON */}
       <div className="back-button-wrapper">
         <Link href="/#projects" className="back-button">
-          Back to Portfolio (presentations)
+          На главную 
         </Link>
       </div>
 
@@ -18,10 +18,10 @@ export default function IdbiRedesign() {
           <h2>Description</h2>
 
           <ul>
-            <li><strong>Client:</strong> Idbi Bank</li>
-            <li><strong>Duration:</strong> 5 hours </li>
+            <li><strong>Клиент:</strong> Idbi банк</li>
+            <li><strong>Длительность:</strong> 5 часов </li>
             <li>
-              <strong>My impact:</strong> redesign in clean and modern style, set consistent design, alignment and layout improvement, formatting
+              <strong>Мой вклад:</strong> Редизайн в чистом и современном стиле, обеспечение единообразия дизайна, улучшение выравнивания и верстки, форматирование
             </li>
           </ul>
 
