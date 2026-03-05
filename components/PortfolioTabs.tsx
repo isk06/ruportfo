@@ -210,6 +210,10 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
                 информации и финансовых метрик (выручка и EBITDA  в прогнозе, факторный анализ, сравнение мультипликаторов, value map, 
                 DCF, WACC, BS, PL)
               </p>
+
+              <p>
+                Области специализации - оценка бизнеса, due diligence, M&A
+              </p>
             </div>
 
             {/* 3-column grid */}
