@@ -21,22 +21,29 @@ export type CaseStudyData = {
 type Props = {
   images: string[];
   pdfs: PdfData[];
+  charts: string[]; // ✅ NEW
 };
 
-export default function PortfolioTabs({ images, pdfs }: Props) {
-  const [activeTab, setActiveTab] = useState<"gallery" | "pdfs">("gallery");
+export default function PortfolioTabs({ images, pdfs, charts }: Props) {
+  const [activeTab, setActiveTab] =
+    useState<"gallery" | "pdfs" | "charts">("gallery");
 
-    // Listen to URL hash
-    useEffect(() => {
-      if (window.location.hash === "#presentations") {
-        setActiveTab("pdfs");
-      }
-    }, []);
   const [isFixed, setIsFixed] = useState(false);
-  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+  const [activeImageIndex, setActiveImageIndex] =
+    useState<number | null>(null);
 
   const anchorRef = useRef<HTMLDivElement>(null);
   const freezePoint = useRef<number>(0);
+
+  // Hash listener
+  useEffect(() => {
+    if (window.location.hash === "#presentations") {
+      setActiveTab("pdfs");
+    }
+    if (window.location.hash === "#charts") {
+      setActiveTab("charts");
+    }
+  }, []);
 
   useEffect(() => {
     if (!anchorRef.current) return;
@@ -52,7 +59,6 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // ✅ Example case study (duplicate this later for new ones)
   const caseStudies: CaseStudyData[] = [
     {
       slug: "Idbi",
@@ -66,25 +72,45 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
     <>
       <div ref={anchorRef} />
 
+      {/* ===================== */}
+      {/* Sticky Header */}
+      {/* ===================== */}
+
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>Мои работы</h2>
+
         <div className="works-tabs">
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
           >
-            Портфолио (галерея)
+            Галерея
           </button>
+
           <button
             className={activeTab === "pdfs" ? "tab active" : "tab"}
             onClick={() => setActiveTab("pdfs")}
           >
-            Портфолио (презентации)
+            Презентации
+          </button>
+
+          {/* ✅ NEW TAB */}
+          <button
+            className={activeTab === "charts" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("charts")}
+          >
+            Диаграммы
           </button>
         </div>
       </div>
 
+      {/* ===================== */}
+      {/* Content */}
+      {/* ===================== */}
+
       <div className="works-content">
+
+        {/* ===== GALLERY ===== */}
         {activeTab === "gallery" && (
           <div className="works-grid">
             {images.map((img, index) => (
@@ -97,10 +123,9 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
           </div>
         )}
 
+        {/* ===== PDFS ===== */}
         {activeTab === "pdfs" && (
           <div className="works-grid">
-
-            {/* ✅ NEW CASE STUDY CARDS */}
             {caseStudies.map((study) => (
               <a
                 key={study.slug}
@@ -126,13 +151,13 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
                     flexDirection: "column",
                     alignItems: "flex-start",
                     padding: "12px",
-                    gap: "6px",
+                    gap: "2px",
                   }}
                 >
                   <span
                     style={{
-                      fontSize: "15px",
-                      fontWeight: 600,
+                      fontSize: "14px",
+                      fontWeight: 500,
                       color: "#111",
                     }}
                   >
@@ -161,7 +186,6 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
               </a>
             ))}
 
-            {/* ✅ EXISTING PDF CARDS (unchanged) */}
             {pdfs.map((pdf) => (
               <PdfCard
                 key={pdf.file}
@@ -172,20 +196,67 @@ export default function PortfolioTabs({ images, pdfs }: Props) {
             ))}
           </div>
         )}
+
+        {/* ===== CHARTS ===== */}
+        {activeTab === "charts" && (
+          <div className="charts-wrapper">
+
+            {/* Gray description pane */}
+            <div className="charts-description">
+              <h3>Финансовые и аналитические диаграммы</h3>
+              <p>
+                Подборка диаграмм, 
+                созданных для консалтинговых и банковских презентаций. Акцент на визуализации экономической 
+                информации и финансовых метрик (выручка и EBITDA  в прогнозе, факторный анализ, сравнение мультипликаторов, value map, 
+                DCF, WACC, BS, PL)
+              </p>
+            </div>
+
+            {/* 3-column grid */}
+            <div className="works-grid">
+              {charts.map((chart, index) => (
+                <ProjectCard
+                  key={chart}
+                  image={`/charts/${chart}`}
+                  onClick={() => setActiveImageIndex(index)}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
       </div>
 
+      {/* ===== MODAL ===== */}
       {activeImageIndex !== null && (
         <ImageModal
-          images={images.map((img) => `/images/${img}`)}
+          images={
+            activeTab === "charts"
+              ? charts.map((img) => `/charts/${img}`)
+              : images.map((img) => `/images/${img}`)
+          }
           index={activeImageIndex}
           onClose={() => setActiveImageIndex(null)}
           onPrev={() =>
             setActiveImageIndex(
-              (i) => (i! - 1 + images.length) % images.length
+              (i) =>
+                (i! - 1 +
+                  (activeTab === "charts"
+                    ? charts.length
+                    : images.length)) %
+                (activeTab === "charts"
+                  ? charts.length
+                  : images.length)
             )
           }
           onNext={() =>
-            setActiveImageIndex((i) => (i! + 1) % images.length)
+            setActiveImageIndex(
+              (i) =>
+                (i! + 1) %
+                (activeTab === "charts"
+                  ? charts.length
+                  : images.length)
+            )
           }
         />
       )}

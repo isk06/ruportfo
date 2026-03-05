@@ -1103,7 +1103,31 @@ a:hover {
   border-bottom: 1px solid #f0f0f0;
 }
 
+/* ================= charts tab ================= */
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
+.charts-description {
+  background: #f3f3f3;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 900px;
+}
+
+.charts-description h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+}
+
+.charts-description p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
 
 
 

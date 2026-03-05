@@ -13,6 +13,21 @@ export default function HomePage() {
         .sort()
     : [];
 
+
+    /* ===============================
+     LOAD CHART IMAGES (NEW)
+  =============================== */
+
+  const chartsDir = path.join(process.cwd(), "public/charts");
+
+  const chartFiles = fs.existsSync(chartsDir)
+    ? fs
+        .readdirSync(chartsDir)
+        .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+        .sort()
+    : [];
+
+
   const pdfFiles: PdfData[] = [
     { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png", title: "J.P.Morgan - SCR storytelling" },
     { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.jpg", title: "Мое портфолио" },
@@ -76,10 +91,6 @@ export default function HomePage() {
                   <span>Figma</span>
                   <span>PPT Productivity</span>
                   <span>think-cell</span>
-                  <span>Дизайн презентаций</span>
-                  <span>Инфографика</span>
-                  <span>Визуализация данных</span>
-                  <span>Финансовые диаграммы</span>
                   <span>Adobe Creative Cloud</span>
                   <span>Blender</span>
                   <span>Python</span>
@@ -166,7 +177,11 @@ export default function HomePage() {
       {/* ================= PORTFOLIO ================= */}
       <section id="portfolio" className="section">
         <div className="portfolio-wrapper">
-          <PortfolioTabs images={imageFiles} pdfs={pdfFiles} />
+          <PortfolioTabs
+            images={imageFiles}
+            pdfs={pdfFiles}
+            charts={chartFiles}   
+          />
         </div>
       </section>
 
