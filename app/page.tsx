@@ -125,7 +125,7 @@ export default function HomePage() {
                   <li>Problem solving</li>
                   <li>Организация работы команды и оптимизация процессов</li>
                   <li>Внимание к деталям</li>
-                  <li>Соблюдение дедлайновs</li>
+                  <li>Соблюдение дедлайнов</li>
                   <li>Высокая скорость работы и автоматизация рутинных процессов</li>
                   <li>Предложение наилучших способов оптимизации и отображения сложных данных</li>
                   
@@ -139,7 +139,7 @@ export default function HomePage() {
                   <li><strong>2025:</strong> Введение в корпоративные финансы (The Wharton School of the University of Pennsylvania)</li>
                   <li><strong>2024:</strong> Консалтинговые презентации и сторителлинг (Emory University); бизнес-презентации в PowerPoint (PriceWaterhouseCoopers); UX/UI дизайн (Google, IBM)</li>
                   <li><strong>2023:</strong> Сертификат Google по автоматизации в ИТ с использованием Python (Google)</li>
-                  <li><strong>2022:</strong> ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
+                  <li><strong>2022:</strong> PCEP – Certified Entry-Level Python Programmer (Python Institute); 
                   ВШЭ - Python для анализа данных (очно)</li>
                   <li><strong>2021:</strong> IELTS Academic; структурирование бизнес-кейсов (Fless)</li>
                 </ul>
