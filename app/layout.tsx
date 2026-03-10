@@ -27,22 +27,20 @@ export default function RootLayout({
     <html lang="en">
       <body className={manrope.className}>
 
-        {/* GLOBAL HEADER */}
-        <header className="global-header">
-          <div className="header-inner">
-            <img
-              src="/avatar.png"
-              alt="Iskander Daraev"
-              className="header-avatar"
-            />
-            <div>
-              <h1 className="header-name">Искандер Дараев</h1>
-              <p className="header-subtitle">
-                Консалтинг, банкинг,  и корпоративные финансы – анализ, сторителлинг и дизайн
-              </p>
-            </div>
+        {/* ================= HEADER ================= */}
+      <section className="hero hero-gray">
+        <div className="hero-content">
+          <div className="hero-logo">
+            <img src="/avatar.png" alt="Искандер Дараев" className="hero-avatar" />
           </div>
-        </header>
+          <div>
+            <h1 className="hero-title">Искандер Дараев</h1>
+            <p className="hero-subtitle">
+              Банки, консалтинг и корпоративные финансы – сторителлинг и дизайн
+            </p>
+          </div>
+        </div>
+      </section>
 
         {/* PAGE CONTENT */}
         <main>{children}</main>
