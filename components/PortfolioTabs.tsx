@@ -262,7 +262,7 @@ export default function PortfolioTabs({
           <div className="dashboards-wrapper">
 
             <div className="dashboards-description">
-              <h3>Аналитические дашборды</h3>
+              {/*<h3>Аналитические дашборды</h3>*/}
 
               <p>
                 {/* вписать текст*/}
