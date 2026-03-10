@@ -1,13 +1,17 @@
 type Props = {
   image: string;
   onClick: () => void;
+  noCaption?: boolean; // optional flag
 };
 
-export default function ProjectCard({ image, onClick }: Props) {
+export default function ProjectCard({ image, onClick, noCaption = false }: Props) {
   return (
-    <div className="card" onClick={onClick}>
+    <div className={`card ${noCaption ? "card-image-only" : ""}`} onClick={onClick}>
       <img src={image} alt="" />
-      <div className="card-caption" />
+
+      {!noCaption && (
+        <div className="card-caption"></div>
+      )}
     </div>
   );
 }

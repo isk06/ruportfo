@@ -1,32 +1,36 @@
 import fs from "fs";
 import path from "path";
 import PortfolioTabs, { PdfData } from "../components/PortfolioTabs";
-import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 
+/* ===============================
+   HELPER: LOAD IMAGES FROM FOLDER
+================================ */
+
+function loadImages(folder: string) {
+  const dir = path.join(process.cwd(), `public/${folder}`);
+
+  if (!fs.existsSync(dir)) return [];
+
+  return fs
+    .readdirSync(dir)
+    .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+    .sort();
+}
+
 export default function HomePage() {
-  const imagesDir = path.join(process.cwd(), "public/images");
-  const imageFiles = fs.existsSync(imagesDir)
-    ? fs
-        .readdirSync(imagesDir)
-        .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
-        .sort()
-    : [];
 
-
-    /* ===============================
-     LOAD CHART IMAGES (NEW)
+  /* ===============================
+     LOAD MEDIA FILES
   =============================== */
 
-  const chartsDir = path.join(process.cwd(), "public/charts");
+  const imageFiles = loadImages("images");
+  const chartFiles = loadImages("charts");
+  const dashboardFiles = loadImages("dashboards");
 
-  const chartFiles = fs.existsSync(chartsDir)
-    ? fs
-        .readdirSync(chartsDir)
-        .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
-        .sort()
-    : [];
-
+  /* ===============================
+     PDF DATA
+  =============================== */
 
   const pdfFiles: PdfData[] = [
     { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png", title: "J.P.Morgan - SCR storytelling" },
@@ -39,38 +43,24 @@ export default function HomePage() {
     { file: "/pdfs/Volac.pdf", cover: "/pdf-covers/Volac.jpg", title: "Volac - презентация для Совета директоров" },
   ];
 
-  {/* file: "/pdfs/Idbi.pdf", cover: "/pdf-covers/Idbi.jpg", title: "IDBI Bank - Investors Presentation" */}
-
   return (
     <>
-      {/* ================= HEADER ================= */}
-      <section className="hero hero-gray">
-        <div className="hero-content">
-          <div className="hero-logo">
-            <img src="/avatar.png" alt="Iskander Daraev" className="hero-avatar" />
-          </div>
-          <div>
-            <h1 className="hero-title">Искандер Дараев</h1>
-            <p className="hero-subtitle">
-              Банки, консалтинг и корпоративные финансы – сторителлинг и дизайн
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ================= JOB STYLE LAYOUT ================= */}
+
       <section className="section">
         <div className="job-layout">
 
           {/* MAIN CARD */}
+
           <div className="job-main-card">
 
-            {/* TOP GRID */}
             <div className="job-top-grid">
 
-              {/* Key Facts */}
+              {/* ABOUT */}
+
               <div>
                 <h3>Обо мне</h3>
+
                 <ul className="fact-list">
                   <li>Более 15 лет опыта в разработке презентаций</li>
                   <li>Кросс-специалист с опытом работы в государственном секторе и финансовом консалтинге</li>
@@ -79,9 +69,11 @@ export default function HomePage() {
                 </ul>
               </div>
 
-              {/* Hard Skills */}
+              {/* TOOLS */}
+
               <div>
                 <h3>Владение ПО</h3>
+
                 <div className="skills-pills">
                   <span>PowerPoint</span>
                   <span>Макросы (PPT, Word, Excel)</span>
@@ -98,16 +90,25 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Other Skills */}
+              {/* EXPERTISE */}
+
               <div>
                 <h3>Специализация и экспертиза</h3>
+
                 <ul className="bullet-list">
+
                   <li><strong>Основные компетенции:</strong> дизайн презентаций 
-                  (C-level/executive, board, консалтинговые, аналитические, инвестиционные, маркетинговые, финансовые, питчи), визуализация
-сложных экономических и финансовых данных, анализ, сторителлинг (принцип Пирамиды, SCR-фреймворк), структурирование информации, форматирование и верстка (Большая четверка, Большая тройка)</li>
-                  <li><strong>Визуальные материалы:</strong> финансовые и пользовательские диаграммы, графики и показатели (Excel/PowerPoint), карты, таблицы</li>
-                  <li><strong>Продукты:</strong> бизнес-презентации, клиентские отчеты, маркетинговые материалы (пропозалы, мемо, onepager, годовые отчеты)</li>
-                  <li><strong>Предметные области:</strong> стратегический консалтинг, инвестбанки, финтех, корпоративные финансы, ИТ, промышленность</li>
+                  (C-level/executive, board, консалтинговые, аналитические, инвестиционные, 
+                  маркетинговые, финансовые, питчи), визуализация
+сложных экономических и финансовых данных, анализ, сторителлинг (принцип Пирамиды, SCR-фреймворк), 
+структурирование информации, форматирование и верстка (Большая четверка, Большая тройка)</li>
+                  <li><strong>Визуальные материалы:</strong> финансовые и 
+                  пользовательские диаграммы, графики и показатели (Excel/PowerPoint), карты, таблицы</li>
+                  <li><strong>Продукты:</strong> бизнес-презентации, клиентские отчеты, 
+                  маркетинговые материалы (пропозалы, мемо, onepager, годовые отчеты)</li>
+                  <li><strong>Предметные области:</strong> стратегический консалтинг, 
+                  инвестбанки, финтех, корпоративные финансы, ИТ, промышленность</li>
+
                 </ul>
               </div>
 
@@ -116,10 +117,12 @@ export default function HomePage() {
             <hr className="divider" />
 
             {/* BOTTOM GRID */}
+
             <div className="job-bottom-grid">
 
               <div>
                 <h3>Прочие навыки</h3>
+
                 <ul className="bullet-list">
                   <li>Быстрое погружение в новые отрасли и бизнес-цепочки</li>
                   <li>Problem solving</li>
@@ -128,13 +131,14 @@ export default function HomePage() {
                   <li>Соблюдение дедлайнов</li>
                   <li>Высокая скорость работы и автоматизация рутинных процессов</li>
                   <li>Предложение наилучших способов оптимизации и отображения сложных данных</li>
-                  
                 </ul>
               </div>
 
               <div>
                 <h3>Дополнительное образование и сертификации</h3>
+
                 <ul className="bullet-list">
+
                   <li><strong>2026:</strong> Power BI, Power Query, DAX (в процессе изучения)</li>
                   <li><strong>2025:</strong> Введение в корпоративные финансы (The Wharton School of the University of Pennsylvania)</li>
                   <li><strong>2024:</strong> Консалтинговые презентации и сторителлинг (Emory University); бизнес-презентации в PowerPoint (PriceWaterhouseCoopers); UX/UI дизайн (Google, IBM)</li>
@@ -142,6 +146,7 @@ export default function HomePage() {
                   <li><strong>2022:</strong> PCEP – Certified Entry-Level Python Programmer (Python Institute); 
                   ВШЭ - Python для анализа данных (очно)</li>
                   <li><strong>2021:</strong> IELTS Academic; структурирование бизнес-кейсов (Fless)</li>
+
                 </ul>
               </div>
 
@@ -150,43 +155,71 @@ export default function HomePage() {
           </div>
 
           {/* SIDEBAR */}
+
           <div className="job-sidebar">
+
             <div className="company-card">
+
               <div className="company-header">
                 <div className="company-logo">ИД</div>
                 <h3>Искандер Дараев</h3>
               </div>
 
               <div className="company-info">
+
                 <h3><strong>Текущая позиция</strong></h3>
                 <p><strong>Компания:</strong> Деловые Решения и Технологии (ранее Deloitte CIS), 2023 - по н/в</p>
                 <p><strong>Позиция:</strong> Менеджер, глава Группы информационного дизайна</p>
                 <p><strong>Департамент:</strong> Финансовое консультирование</p>
+
               </div>
 
               <div className="company-links">
-                {/*<a href="https://www.linkedin.com/in/iskdaraev/" target="_blank">LinkedIn</a>
-                <a href="https://www.behance.net/iskdaraev" target="_blank">Behance</a>*/}
+
+                <a
+                  href="https://www.linkedin.com/in/iskdaraev/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+
+                <a
+                  href="https://www.behance.net/iskdaraev"
+                  target="_blank"
+                >
+                  Behance
+                </a>
+
               </div>
+
             </div>
+
           </div>
 
         </div>
       </section>
 
       {/* ================= PORTFOLIO ================= */}
+
       <section id="portfolio" className="section">
+
         <div className="portfolio-wrapper">
+
           <PortfolioTabs
             images={imageFiles}
             pdfs={pdfFiles}
-            charts={chartFiles}   
+            charts={chartFiles}
+            dashboards={dashboardFiles}
           />
+
         </div>
+
       </section>
 
       {/* ================= CONTACT ================= */}
+
       <section className="section contact-section">
+
         <h2>Обратная связь</h2>
 
         <form
@@ -194,6 +227,7 @@ export default function HomePage() {
           action="https://formspree.io/f/xpqqzaww"
           method="POST"
         >
+
           <div className="form-group">
             <label>Имя<span>*</span></label>
             <input type="text" name="name" required />
@@ -212,11 +246,12 @@ export default function HomePage() {
           <button type="submit" className="form-submit">
             Отправить
           </button>
+
         </form>
+
       </section>
 
       <BackToTop />
-      <Footer />
     </>
   );
 }
