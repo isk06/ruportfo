@@ -1129,7 +1129,41 @@ a:hover {
   line-height: 1.6;
 }
 
+/* ================= dashboards tab ================= */
 
+.dashboards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dashboards-description {
+  background: #f3f3f3;
+  padding: 32px;
+  border-radius: 12px;
+  max-width: 1200px;
+}
+
+.dashboards-description h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+}
+
+.dashboards-description p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.dashboards-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.card-image-only img {
+  display: block;
 
 
 
