@@ -34,6 +34,7 @@ export default function HomePage() {
 
   const pdfFiles: PdfData[] = [
     { file: "/pdfs/J.P.Morgan_SCR_storytelling.pdf", cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png", title: "J.P.Morgan - SCR storytelling" },
+    { file: "/pdfs/Alix.pdf", cover: "/pdf-covers/Alix.jpg", title: "Alix - презентация для инвесторов" },
     { file: "/pdfs/Portfolio_I.Daraev_2025.pdf", cover: "/pdf-covers/Portfolio_I.Daraev_2025.jpg", title: "Мое портфолио" },
     { file: "/pdfs/Airbus.pdf", cover: "/pdf-covers/Airbus.png", title: "Airbus" },
     { file: "/pdfs/Sorwe.pdf", cover: "/pdf-covers/Sorwe.png", title: "Sorwe" },
@@ -41,7 +42,7 @@ export default function HomePage() {
     { file: "/pdfs/Zero.pdf", cover: "/pdf-covers/Zero.jpg", title: "Zero eDiscovery" },
     { file: "/pdfs/Nature_ASI_2025.pdf", cover: "/pdf-covers/Nature_ASI_2025.jpg", title: "АСИ - Концепция Единица природы" },
     { file: "/pdfs/Volac.pdf", cover: "/pdf-covers/Volac.jpg", title: "Volac - презентация для Совета директоров" },
-    { file: "/pdfs/Alix.pdf", cover: "/pdf-covers/Alix.jpg", title: "Alix - презентация для инвесторов" },
+    
   ];
 
   return (
