@@ -815,8 +815,8 @@ a:hover {
   display: grid;
   gap: 19px;
 
-  /* New responsive grid behavior */
-  grid-template-columns: minmax(1000px, 1.0fr) minmax(250px, 0.5fr);
+  /* New responsive grid behavior ШИРИНА ВЕРХНИХ ПОЛЕЙ*/
+  grid-template-columns: 5fr 2fr;
 
   /* Comments:
      - Left column minimum 700px (wide enough to avoid narrow text)
@@ -827,6 +827,16 @@ a:hover {
   */
 }
 
+@media (max-width: 1024px) {
+  .job-layout {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .job-sidebar {
+    position: relative; /* remove sticky on mobile */
+    top: auto;
+  }
+}
 
 .job-main-card {
   background: #f7f8fa;
@@ -837,13 +847,25 @@ a:hover {
 .job-top-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 32x;
+}
+
+@media (max-width: 1024px) {
+  .job-top-grid {
+    grid-template-columns: 1fr; /* stack */
+  }
 }
 
 .job-bottom-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .job-bottom-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .divider {
