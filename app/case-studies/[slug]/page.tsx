@@ -26,7 +26,7 @@ export default function IdbiRedesign() {
           </ul>
 
           <a
-            href="/pdfs/Idbi embb.pdf"
+            href="/pdfs/Idbi.pdf"
             download
             className="download-link"
           >
