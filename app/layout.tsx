@@ -36,7 +36,7 @@ export default function RootLayout({
           <div>
             <h1 className="hero-title">Искандер Дараев</h1>
             <p className="hero-subtitle">
-              Банки, консалтинг и корпоративные финансы – сторителлинг и дизайн
+              Банки, консалтинг и корпоративные финансы – анализ, сторителлинг и дизайн
             </p>
           </div>
         </div>
