@@ -262,11 +262,11 @@ export default function PortfolioTabs({
           <div className="dashboards-wrapper">
 
             <div className="dashboards-description">
-              {/*<h3>Аналитические дашборды Excel & PowerPoint</h3>*/}
+              {<h3>Аналитические дашборды Excel & PowerPoint</h3>}
 
               <p>
-                {/* Подборка моих дашбордов, созданных с нуля. Дашборды Excel разработаны с использованием Power Query, pivot tables, формул (VLOOKUP, IF/AND/OR, SUMIF, COUNTIF, INDEX и др.), 
-                условного форматирования ячеек, слайсеров*/}
+                Подборка дашбордов, созданных мной с нуля. Дашборды Excel разработаны с использованием Power Query, pivot tables, формул (VLOOKUP, IF/AND/OR, SUMIF, COUNTIF, INDEX и др.), 
+                условного форматирования ячеек, слайсеров
               </p>
 
               <p>
