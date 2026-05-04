@@ -14,7 +14,7 @@ function loadImages(folder: string) {
 
   return fs
     .readdirSync(dir)
-    .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+    .filter((file) => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
     .sort();
 }
 
